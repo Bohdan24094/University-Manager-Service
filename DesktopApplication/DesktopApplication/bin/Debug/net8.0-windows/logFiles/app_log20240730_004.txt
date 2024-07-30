@@ -1,0 +1,23 @@
+2024-07-30 15:59:33.035 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 15:59:34.018 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 15:59:34.052 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 15:59:44.534 +03:00 [INF] Updating group Bio-101
+2024-07-30 15:59:44.618 +03:00 [INF] Group Bio-101 updated successfully
+2024-07-30 15:59:45.591 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 15:59:45.596 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 15:59:45.599 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 15:59:50.968 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 15:59:55.822 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 15:59:55.827 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 15:59:55.833 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 15:59:59.434 +03:00 [INF] Updating group Bio-103
+2024-07-30 15:59:59.437 +03:00 [INF] Group Bio-103 updated successfully
+2024-07-30 16:00:00.712 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 16:00:00.715 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 16:00:00.718 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 16:00:04.253 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 16:00:04.255 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 16:00:04.255 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 16:00:06.202 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 16:02:22.535 +03:00 [INF] Application starting up
+2024-07-30 16:02:22.572 +03:00 [INF] Application Starting Up

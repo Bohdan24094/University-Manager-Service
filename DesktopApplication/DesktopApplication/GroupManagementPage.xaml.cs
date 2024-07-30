@@ -3,8 +3,6 @@ using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
 using DesktopApplication.Services;
-using System.Windows.Navigation;
-using Serilog;
 
 namespace DesktopApplication
 {

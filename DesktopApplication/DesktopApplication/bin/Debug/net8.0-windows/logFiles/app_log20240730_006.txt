@@ -1,0 +1,15 @@
+2024-07-30 16:05:53.075 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 16:05:54.050 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 16:05:54.082 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 16:05:56.672 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 16:06:05.450 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 16:06:05.454 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 16:06:05.455 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 16:06:22.092 +03:00 [INF] Importing students asynchronously for Group ID: 1012
+2024-07-30 16:06:22.111 +03:00 [INF] Group found: 1012. Proceeding to clear existing students.
+2024-07-30 16:06:22.151 +03:00 [INF] Adding student: Jane MariaCuryy to Group: 1012
+2024-07-30 16:06:22.152 +03:00 [INF] Adding student: Anna MaryyCur to Group: 1012
+2024-07-30 16:06:22.152 +03:00 [INF] Adding student: Samuel LJjJackson to Group: 1012
+2024-07-30 16:06:22.152 +03:00 [INF] Adding student: Samanta FonnDerAdams to Group: 1012
+2024-07-30 17:35:33.574 +03:00 [INF] Application starting up
+2024-07-30 17:35:33.609 +03:00 [INF] Application Starting Up

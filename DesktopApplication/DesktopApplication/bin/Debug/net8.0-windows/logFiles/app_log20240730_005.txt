@@ -1,0 +1,12 @@
+2024-07-30 16:02:24.370 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 16:02:25.331 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 16:02:25.363 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 16:02:40.742 +03:00 [INF] Creating new group: Bio-104
+2024-07-30 16:02:40.838 +03:00 [INF] Group Bio-104 created successfully
+2024-07-30 16:02:41.905 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 16:02:41.912 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 16:02:41.919 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 16:02:43.500 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 16:02:46.255 +03:00 [INF] Application Shutting Down
+2024-07-30 16:05:50.662 +03:00 [INF] Application starting up
+2024-07-30 16:05:50.698 +03:00 [INF] Application Starting Up

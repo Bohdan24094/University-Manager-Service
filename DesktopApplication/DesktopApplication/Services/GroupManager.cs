@@ -134,40 +134,62 @@ namespace DesktopApplication.Services
 
         public async Task ImportStudentsAsync(int groupId, string filePath)
         {
-            _logger.Information("Importing students for group {GroupId} from {FilePath}", groupId, filePath);
+            _logger.Information("Importing students asynchronously for Group ID: {GroupId}", groupId);
 
-            var selectedGroup = _context.Groups
-                                        .Include(g => g.Students)
-                                        .FirstOrDefault(g => g.GroupId == groupId);
-            if (selectedGroup != null)
+            // Ensure group exists before proceeding
+            var selectedGroup = await _context.Groups
+                .Include(g => g.Students)
+                .FirstOrDefaultAsync(g => g.GroupId == groupId);
+
+            if (selectedGroup == null)
             {
-                _context.Students.RemoveRange(selectedGroup.Students);
-                _context.SaveChanges();
-
-                using (var reader = new StreamReader(filePath))
-                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-                {
-                    var records = csv.GetRecords<StudentRecord>();
-                    foreach (var record in records)
-                    {
-                        var newStudent = new Student
-                        {
-                            FirstName = record.FirstName,
-                            LastName = record.LastName,
-                            GroupId = selectedGroup.GroupId
-                        };
-                        _context.Students.Add(newStudent);
-                        _logger.Information("Student {FirstName} {LastName} imported successfully", record.FirstName, record.LastName);
-
-                    }
-                    await _context.SaveChangesAsync();
-                    _logger.Information("Students imported successfully for group {GroupId}", groupId);
-
-                }
+                _logger.Warning("Group ID: {GroupId} does not exist. Aborting import.", groupId);
+                return;
             }
-            else
+
+            // Wrap the operation in a transaction
+            using (var transaction = await _context.Database.BeginTransactionAsync())
             {
-                throw new Exception("Group does not exist.");
+                try
+                {
+                    // Remove existing students if any
+                    if (selectedGroup.Students.Any())
+                    {
+                        _context.Students.RemoveRange(selectedGroup.Students);
+                        await _context.SaveChangesAsync();
+                        _logger.Information("Existing students for Group ID: {GroupId} removed", groupId);
+                    }
+
+                    // Load the new students from the CSV
+                    using (var reader = new StreamReader(filePath))
+                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                    {
+                        var studentRecords = csv.GetRecords<StudentRecord>().ToList();
+
+                        foreach (var record in studentRecords)
+                        {
+                            var newStudent = new Student
+                            {
+                                FirstName = record.FirstName,
+                                LastName = record.LastName,
+                                GroupId = groupId
+                            };
+
+                            _context.Students.Add(newStudent);
+                            _logger.Information("Adding student: {FirstName} {LastName} to Group: {GroupId}", newStudent.FirstName, newStudent.LastName, newStudent.GroupId);
+                        }
+                    }
+
+                    await _context.SaveChangesAsync();
+                    await transaction.CommitAsync();
+                    _logger.Information("Students imported successfully for Group ID: {GroupId}", groupId);
+                }
+                catch (Exception ex)
+                {
+                    await transaction.RollbackAsync();
+                    _logger.Error(ex, "Error importing students for Group ID: {GroupId}", groupId);
+                    throw;
+                }
             }
         }
 

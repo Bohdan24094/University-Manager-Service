@@ -3,28 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\groupmanagementpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\services\\groupmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\services\\groupmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|c:\\users\\bobko\\development\\wpf-desktop-application\\desktopapplication\\desktopapplication\\groupmanagementpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\groupmanagementpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\maincontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\maincontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\universitycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\models\\universitycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\studentrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\models\\studentrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\studentexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\models\\studentexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\services\\groupmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\services\\groupmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\studentmanagementpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\studentmanagementpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\maincontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\maincontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,31 +66,11 @@
       "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\studentmanagementpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\studentmanagementpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\studentmanagementpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\groupmanagementpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\groupmanagementpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bobko\\AppData\\Local\\Temp\\.vsdbgsrc\\bf181cacff03ee9afb8aeba00dc7c836930532be0d5d44476e601f59af11bfe8\\NavigationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\studentexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\models\\studentexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\studentrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\models\\studentrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\universitycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\models\\universitycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\desktopapplication\\models\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -92,7 +92,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 386,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -101,96 +101,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\Student.cs",
+              "RelativeToolTip": "DesktopApplication\\Models\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T09:43:29.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UniversityContext.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\UniversityContext.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\Models\\UniversityContext.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\UniversityContext.cs",
+              "RelativeToolTip": "DesktopApplication\\Models\\UniversityContext.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAAwEsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T09:51:51.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "GroupManager.cs",
               "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Services\\GroupManager.cs",
               "RelativeDocumentMoniker": "DesktopApplication\\Services\\GroupManager.cs",
               "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Services\\GroupManager.cs",
               "RelativeToolTip": "DesktopApplication\\Services\\GroupManager.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwDgAAAAAAAAA",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAmwJEAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T10:59:19.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "StudentRecord.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\StudentRecord.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\Models\\StudentRecord.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\StudentRecord.cs",
+              "RelativeToolTip": "DesktopApplication\\Models\\StudentRecord.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T11:44:16.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentExport.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\StudentExport.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\Models\\StudentExport.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\StudentExport.cs",
+              "RelativeToolTip": "DesktopApplication\\Models\\StudentExport.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T12:41:45.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "GroupManagementPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\GroupManagementPage.xaml.cs",
               "RelativeDocumentMoniker": "DesktopApplication\\GroupManagementPage.xaml.cs",
               "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\GroupManagementPage.xaml.cs",
               "RelativeToolTip": "DesktopApplication\\GroupManagementPage.xaml.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAADwv3oAAAAAAAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAwwDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T10:02:09.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\App.xaml.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\App.xaml.cs",
-              "RelativeToolTip": "DesktopApplication\\App.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T00:15:14.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\App.xaml",
-              "RelativeDocumentMoniker": "DesktopApplication\\App.xaml",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\App.xaml",
-              "RelativeToolTip": "DesktopApplication\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-24T00:21:36.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Group.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\Group.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\Models\\Group.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\Group.cs",
-              "RelativeToolTip": "DesktopApplication\\Models\\Group.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T09:38:14.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainWindow.xaml.cs",
-              "RelativeToolTip": "DesktopApplication\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAAB8AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T23:53:10.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainContent.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainContent.xaml.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\MainContent.xaml.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainContent.xaml.cs",
-              "RelativeToolTip": "DesktopApplication\\MainContent.xaml.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAuwCMAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T13:49:24.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainWindow.xaml",
               "RelativeDocumentMoniker": "DesktopApplication\\MainWindow.xaml",
@@ -202,20 +190,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GroupManager.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\AppData\\Local\\Temp\\.vsdbgsrc\\7486d7ba20c0cbfee20c31c971b8fcd15a8d4a2ce93966305774f094c67ddc39\\GroupManager.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\7486d7ba20c0cbfee20c31c971b8fcd15a8d4a2ce93966305774f094c67ddc39\\GroupManager.cs",
-              "ToolTip": "C:\\Users\\bobko\\AppData\\Local\\Temp\\.vsdbgsrc\\7486d7ba20c0cbfee20c31c971b8fcd15a8d4a2ce93966305774f094c67ddc39\\GroupManager.cs",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\7486d7ba20c0cbfee20c31c971b8fcd15a8d4a2ce93966305774f094c67ddc39\\GroupManager.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\App.xaml.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\App.xaml.cs",
+              "RelativeToolTip": "DesktopApplication\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T23:25:23.507Z",
+              "WhenOpened": "2024-07-24T00:15:14.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "StudentManagementPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\StudentManagementPage.xaml.cs",
               "RelativeDocumentMoniker": "DesktopApplication\\StudentManagementPage.xaml.cs",
@@ -223,11 +211,74 @@
               "RelativeToolTip": "DesktopApplication\\StudentManagementPage.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T22:48:36.764Z"
+              "WhenOpened": "2024-07-29T22:48:36.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainWindow.xaml.cs",
+              "RelativeToolTip": "DesktopApplication\\MainWindow.xaml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T23:53:10.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainContent.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainContent.xaml.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\MainContent.xaml.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainContent.xaml.cs",
+              "RelativeToolTip": "DesktopApplication\\MainContent.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T13:49:24.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Group.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\Group.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\Models\\Group.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\Group.cs",
+              "RelativeToolTip": "DesktopApplication\\Models\\Group.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T09:38:14.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\App.xaml",
+              "RelativeDocumentMoniker": "DesktopApplication\\App.xaml",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\App.xaml",
+              "RelativeToolTip": "DesktopApplication\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-24T00:21:36.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GroupManager.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\AppData\\Local\\Temp\\.vsdbgsrc\\7486d7ba20c0cbfee20c31c971b8fcd15a8d4a2ce93966305774f094c67ddc39\\GroupManager.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\7486d7ba20c0cbfee20c31c971b8fcd15a8d4a2ce93966305774f094c67ddc39\\GroupManager.cs",
+              "ToolTip": "C:\\Users\\bobko\\AppData\\Local\\Temp\\.vsdbgsrc\\7486d7ba20c0cbfee20c31c971b8fcd15a8d4a2ce93966305774f094c67ddc39\\GroupManager.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\7486d7ba20c0cbfee20c31c971b8fcd15a8d4a2ce93966305774f094c67ddc39\\GroupManager.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T23:25:23.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "StudentManagementPage.xaml",
               "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\StudentManagementPage.xaml",
               "RelativeDocumentMoniker": "DesktopApplication\\StudentManagementPage.xaml",
@@ -238,19 +289,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "MainContent.xaml",
               "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainContent.xaml",
               "RelativeDocumentMoniker": "DesktopApplication\\MainContent.xaml",
               "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\MainContent.xaml",
               "RelativeToolTip": "DesktopApplication\\MainContent.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-29T13:48:17.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-29T13:48:17.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "GroupManagementPage.xaml",
               "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\GroupManagementPage.xaml",
               "RelativeDocumentMoniker": "DesktopApplication\\GroupManagementPage.xaml",
@@ -261,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "NavigationService.cs",
               "DocumentMoniker": "C:\\Users\\bobko\\AppData\\Local\\Temp\\.vsdbgsrc\\bf181cacff03ee9afb8aeba00dc7c836930532be0d5d44476e601f59af11bfe8\\NavigationService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\bf181cacff03ee9afb8aeba00dc7c836930532be0d5d44476e601f59af11bfe8\\NavigationService.cs",
@@ -270,54 +320,6 @@
               "ViewState": "AQIAACcDAAAAAAAAAAArwDQDAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T13:18:44.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\Models\\Student.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\Student.cs",
-              "RelativeToolTip": "DesktopApplication\\Models\\Student.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T09:43:29.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "StudentExport.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\StudentExport.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\Models\\StudentExport.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\StudentExport.cs",
-              "RelativeToolTip": "DesktopApplication\\Models\\StudentExport.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T12:41:45.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UniversityContext.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\UniversityContext.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\Models\\UniversityContext.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\UniversityContext.cs",
-              "RelativeToolTip": "DesktopApplication\\Models\\UniversityContext.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwCMAAABcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T09:51:51.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "StudentRecord.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\StudentRecord.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\Models\\StudentRecord.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\DesktopApplication\\Models\\StudentRecord.cs",
-              "RelativeToolTip": "DesktopApplication\\Models\\StudentRecord.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T11:44:16.567Z"
             },
             {
               "$type": "Document",

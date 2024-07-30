@@ -1,9 +1,4 @@
 ﻿using Serilog;
-using Serilog.Events;
-using Serilog.Sinks;
-using System.Configuration;
-using System.Data;
-using System.Data.Common;
 using System.Windows;
 
 namespace DesktopApplication

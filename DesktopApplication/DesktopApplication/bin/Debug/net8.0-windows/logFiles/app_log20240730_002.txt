@@ -1,0 +1,19 @@
+2024-07-30 15:47:17.911 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 15:47:18.833 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 15:47:18.866 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 15:47:24.937 +03:00 [INF] Importing students for group 1010 from C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\ImportedStudentsCsv\StudentsForImport.csv
+2024-07-30 15:47:25.042 +03:00 [INF] Student Jane MariaCury imported successfully
+2024-07-30 15:47:25.042 +03:00 [INF] Student Anna MaryCur imported successfully
+2024-07-30 15:47:25.042 +03:00 [INF] Student Samuel LJJackson imported successfully
+2024-07-30 15:47:25.043 +03:00 [INF] Student Samanta FonDerAdams imported successfully
+2024-07-30 15:49:35.548 +03:00 [INF] Application starting up
+2024-07-30 15:49:35.584 +03:00 [INF] Application Starting Up
+2024-07-30 15:49:38.368 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 15:49:39.223 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 15:49:39.251 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 15:49:40.895 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 15:49:53.735 +03:00 [INF] Fetching all groups asynchronously
+2024-07-30 15:49:53.739 +03:00 [INF] Fetching all teachers asynchronously
+2024-07-30 15:49:53.742 +03:00 [INF] Fetching all courses asynchronously
+2024-07-30 15:56:50.899 +03:00 [INF] Application starting up
+2024-07-30 15:56:50.934 +03:00 [INF] Application Starting Up

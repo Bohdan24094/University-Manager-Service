@@ -1,18 +1,7 @@
 ﻿using DesktopApplication.Models;
 using DesktopApplication.Services;
-using DocumentFormat.OpenXml.Wordprocessing;
-using Microsoft.EntityFrameworkCore;
 using Serilog;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DesktopApplication
 {
@@ -43,11 +32,9 @@ namespace DesktopApplication
 
         private void ManageGroups_Click(object sender, RoutedEventArgs e)
         {
-            // Navigate to GroupManagementPage
             MainFrame.Navigate(new GroupManagementPage(_groupManager));
         }
 
-        // Add a method to navigate back to the main content
         public void NavigateToMainContent()
         {
             MainFrame.Navigate(new MainContent(_groupManager));
