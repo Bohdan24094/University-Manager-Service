@@ -1,0 +1,9 @@
+StudentId,GroupId,FirstName,LastName,GroupId,CourseId,TeacherId,Name,CourseId,Name,Description,TeacherId,FirstName,LastName
+2,1,Alice,Smith,1,1,1,Bio-101,1,Biology,Study of living organisms.,1,Jamey,Oliver
+3,1,Bob,Johnson,1,1,1,Bio-101,1,Biology,Study of living organisms.,1,Jamey,Oliver
+9,1,Alice,Rojers,1,1,1,Bio-101,1,Biology,Study of living organisms.,1,Jamey,Oliver
+10,1,Bob,Dylan,1,1,1,Bio-101,1,Biology,Study of living organisms.,1,Jamey,Oliver
+16,1,John,Smith,1,1,1,Bio-101,1,Biology,Study of living organisms.,1,Jamey,Oliver
+17,1,Andy,Johnson,1,1,1,Bio-101,1,Biology,Study of living organisms.,1,Jamey,Oliver
+23,1,Rob,Hallford,1,1,1,Bio-101,1,Biology,Study of living organisms.,1,Jamey,Oliver
+24,1,Bob,Nyjel,1,1,1,Bio-101,1,Biology,Study of living organisms.,1,Jamey,Oliver
