@@ -9,6 +9,8 @@ using iText.Kernel.Pdf;
 using Paragraph = DocumentFormat.OpenXml.Wordprocessing.Paragraph;
 using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 using Serilog;
+using DesktopApplication.ViewModels;
+using System.Windows;
 
 namespace DesktopApplication.Services
 {
@@ -24,7 +26,6 @@ namespace DesktopApplication.Services
 
         public async Task<IEnumerable<Group>> GetAllGroupsAsync()
         {
-            _logger.Information("Fetching all groups asynchronously");
             return await _context.Groups
                 .Include(g => g.Teacher)
                 .Include(g => g.Students)
@@ -34,13 +35,11 @@ namespace DesktopApplication.Services
 
         public async Task<IEnumerable<Teacher>> GetAllTeachersAsync()
         {
-            _logger.Information("Fetching all teachers asynchronously");
             return await _context.Teachers.ToListAsync();
         }
 
         public async Task<IEnumerable<Course>> GetAllCoursesAsync()
         {
-            _logger.Information("Fetching all courses asynchronously");
             return await _context.Courses.ToListAsync();
         }
 
@@ -48,24 +47,62 @@ namespace DesktopApplication.Services
         {
             _logger.Information("Creating new group: {GroupName}", groupName);
 
+            // Check if a group with the same name already exists within the same course
+            var existingGroup = await _context.Groups
+                                              .FirstOrDefaultAsync(g => g.Name == groupName && g.CourseId == courseId);
+
+            if (existingGroup != null)
+            {
+                _logger.Warning("A group with the same name '{GroupName}' already exists in course '{CourseId}'", groupName, courseId);
+                MessageBox.Show($"A group with the same name '{groupName}' currently exists in this course. You can change the name or create it in another course.");
+                return;
+            }
+
             var newGroup = new Group
             {
                 Name = groupName,
                 CourseId = courseId,
-                TeacherId = teacherId   
+                TeacherId = teacherId
             };
 
-             _context.Groups.Add(newGroup);
-             await _context.SaveChangesAsync();
-            _logger.Information("Group {GroupName} created successfully", groupName);
+            _context.Groups.Add(newGroup);
+            await _context.SaveChangesAsync();
 
+            _logger.Information("Group {GroupName} created successfully", groupName);
+            MessageBox.Show($"Group '{groupName}' created successfully");
         }
+
 
         public async Task UpdateGroupAsync(int groupId, string groupName, int courseId, int teacherId)
         {
-            _logger.Information("Updating group {GroupName}", groupName);
+            _logger.Information("Updating group with GroupId: {GroupId}", groupId);
 
-            var selectedGroup = _context.Groups.FirstOrDefault(g => g.GroupId == groupId);
+            // Check if the new group name already exists within the same course
+            var groupWithSameName = await _context.Groups
+                .Where(g => g.CourseId == courseId && g.Name == groupName && g.GroupId != groupId)
+                .FirstOrDefaultAsync();
+
+            // Check if the teacher is already assigned to another group within the same course
+            var groupWithSameTeacher = await _context.Groups
+                .Where(g => g.CourseId == courseId && g.TeacherId == teacherId && g.GroupId != groupId)
+                .FirstOrDefaultAsync();
+
+            if (groupWithSameName != null)
+            {
+                _logger.Warning("A group with the same name '{GroupName}' already exists in the course '{CourseId}'", groupName, courseId);
+                MessageBox.Show("A group with the same name currently exists in this course. Please choose another name.");
+                return;
+            }
+
+            if (groupWithSameTeacher != null)
+            {
+                _logger.Warning("A group with TeacherId '{TeacherId}' already exists in the course '{CourseId}'", teacherId, courseId);
+                MessageBox.Show("The teacher is already assigned to another group in this course. Please choose another teacher.");
+                return;
+            }
+
+            // Proceed with updating the group if both checks pass
+            var selectedGroup = await _context.Groups.FindAsync(groupId);
             if (selectedGroup != null)
             {
                 selectedGroup.Name = groupName;
@@ -73,8 +110,15 @@ namespace DesktopApplication.Services
                 selectedGroup.TeacherId = teacherId;
                 await _context.SaveChangesAsync();
                 _logger.Information("Group {GroupName} updated successfully", groupName);
+                MessageBox.Show("Group {GroupName} updated successfully", groupName);
+            }
+            else
+            {
+                _logger.Warning("Group with GroupId '{GroupId}' not found", groupId);
+                MessageBox.Show("The specified group could not be found.");
             }
         }
+
 
         public async Task DeleteGroupAsync(int groupId)
         {
@@ -96,11 +140,23 @@ namespace DesktopApplication.Services
             }
         }
 
-        public void ClearGroup(int groupId)
+        public async Task ClearGroupAsync(int groupId)
         {
-            var selectedGroup = _context.Groups
-                                .FirstOrDefault(g => g.GroupId == groupId);
-            _context.Groups.RemoveRange(selectedGroup);
+            _logger.Information("Clearing students in Group ID: {GroupId}", groupId);
+
+            var group = await _context.Groups.Include(g => g.Students)
+                                             .FirstOrDefaultAsync(g => g.GroupId == groupId);
+
+            if (group != null && group.Students.Any())
+            {
+                _context.Students.RemoveRange(group.Students);
+                await _context.SaveChangesAsync();
+                _logger.Information("Students cleared for Group ID: {GroupId}", groupId);
+            }
+            else
+            {
+                _logger.Information("No students found to clear for Group ID: {GroupId}", groupId);
+            }
         }
 
         public void ExportStudents(int groupId, string filePath)
@@ -152,19 +208,11 @@ namespace DesktopApplication.Services
             {
                 try
                 {
-                    // Remove existing students if any
-                    if (selectedGroup.Students.Any())
-                    {
-                        _context.Students.RemoveRange(selectedGroup.Students);
-                        await _context.SaveChangesAsync();
-                        _logger.Information("Existing students for Group ID: {GroupId} removed", groupId);
-                    }
-
                     // Load the new students from the CSV
                     using (var reader = new StreamReader(filePath))
                     using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                     {
-                        var studentRecords = csv.GetRecords<StudentRecord>().ToList();
+                        var studentRecords = csv.GetRecords<PersonRecord>().ToList();
 
                         foreach (var record in studentRecords)
                         {
@@ -172,11 +220,11 @@ namespace DesktopApplication.Services
                             {
                                 FirstName = record.FirstName,
                                 LastName = record.LastName,
-                                GroupId = groupId
+                                Group = selectedGroup
                             };
 
                             _context.Students.Add(newStudent);
-                            _logger.Information("Adding student: {FirstName} {LastName} to Group: {GroupId}", newStudent.FirstName, newStudent.LastName, newStudent.GroupId);
+                            _logger.Information("Adding student: {FirstName} {LastName} to Group: {GroupId}", newStudent.FirstName, newStudent.LastName, selectedGroup.GroupId);
                         }
                     }
 

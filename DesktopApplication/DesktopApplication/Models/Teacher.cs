@@ -11,5 +11,5 @@ public partial class Teacher
 
     public string LastName { get; set; } = null!;
 
-    public virtual ICollection<Group> Groups { get; set; } = new List<Group>();
+    public Group Group { get; set; } = null!;
 }

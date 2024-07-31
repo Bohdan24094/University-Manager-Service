@@ -169,3 +169,5 @@ C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApp
 C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\obj\Debug\net8.0-windows\StudentManagementPage.baml
 C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\bin\Debug\net8.0-windows\Serilog.Extensions.Logging.dll
 C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\bin\Debug\net8.0-windows\Serilog.Sinks.Console.dll
+C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\obj\Debug\net8.0-windows\TeacherManagementPage.g.cs
+C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\obj\Debug\net8.0-windows\TeacherManagementPage.baml

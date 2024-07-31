@@ -1,0 +1,10 @@
+2024-07-31 05:42:37.618 +03:00 [INF] Application starting up
+2024-07-31 05:42:37.652 +03:00 [INF] Application Starting Up
+2024-07-31 05:44:07.286 +03:00 [INF] Application starting up
+2024-07-31 05:44:07.321 +03:00 [INF] Application Starting Up
+2024-07-31 06:45:43.364 +03:00 [INF] Application starting up
+2024-07-31 06:45:43.400 +03:00 [INF] Application Starting Up
+2024-07-31 06:50:52.619 +03:00 [INF] Application starting up
+2024-07-31 06:50:52.653 +03:00 [INF] Application Starting Up
+2024-07-31 07:18:51.140 +03:00 [INF] Application starting up
+2024-07-31 07:18:51.182 +03:00 [INF] Application Starting Up

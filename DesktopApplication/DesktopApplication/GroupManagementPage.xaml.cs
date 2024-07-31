@@ -54,8 +54,7 @@ namespace DesktopApplication
             if (selectedGroup != null)
             {
                 await _groupManager.UpdateGroupAsync(selectedGroup.GroupId, GroupNameTextBox.Text, (int)CourseComboBox.SelectedValue, (int)TeacherComboBox.SelectedValue);
-                MessageBox.Show("Group Updated Succesfully");
-                LoadData();
+               LoadData();
             }
         }
 
@@ -89,10 +88,9 @@ namespace DesktopApplication
         {
             var selectedGroup = GroupListBox.SelectedItem as Group;
             if (selectedGroup == null) return;
-            if (!selectedGroup.Students.Any())
-            {
-                _groupManager.ClearGroup(selectedGroup.GroupId);
-            }
+
+            await _groupManager.ClearGroupAsync(selectedGroup.GroupId);
+
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "CSV file (*.csv)|*.csv"

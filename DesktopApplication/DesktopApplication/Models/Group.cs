@@ -15,7 +15,7 @@ public partial class Group
 
     public virtual Course Course { get; set; } = null!;
 
-    public virtual ICollection<Student> Students { get; set; } = new List<Student>();
+    public virtual List<Student> Students { get; set; }
 
     public virtual Teacher Teacher { get; set; } = null!;
 }

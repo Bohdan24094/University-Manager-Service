@@ -41,7 +41,7 @@
   <ItemGroup>
     <Folder Include="ExportedStudentsCsv\" />
     <Folder Include="ImportedStudentsCsv\" />
-    <Folder Include="logFiles\" />
+    <Folder Include="logs\" />
   </ItemGroup>
 
 </Project>

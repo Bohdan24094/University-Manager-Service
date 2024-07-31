@@ -9,8 +9,8 @@
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
             <Button Content="Manage Groups" DockPanel.Dock="Top" Click="ManageGroups_Click" Margin="5"/>
-            <Button Content="Manage Teachers" DockPanel.Dock="Top" Click="ManageGroups_Click" Margin="5"/>
-            <Button Content="Manage Students" DockPanel.Dock="Top" Click="ManageGroups_Click" Margin="5"/>
+            <Button Content="Manage Teachers" DockPanel.Dock="Top" Click="ManageTeachers_Click" Margin="5"/>
+            <Button Content="Manage Students" DockPanel.Dock="Top" Click="ManageStudents_Click" Margin="5"/>
         </StackPanel>
         
         <Frame x:Name="MainFrame" DockPanel.Dock="Top"/>
