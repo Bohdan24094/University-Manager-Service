@@ -14,6 +14,7 @@
             <Button Content="Add Teacher" Click="AddTeacher_Click" Margin="5"/>
             <Button Content="Update Teacher" Click="UpdateTeacher_Click" Margin="5"/>
             <Button Content="Delete Teacher" Click="DeleteTeacher_Click" Margin="5"/>
+            <Button Content="Main Window" Click="ReturnToMainWindow_Click" Margin="5"/>
         </StackPanel>
 
         <!-- Teacher List -->

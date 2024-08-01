@@ -14,6 +14,7 @@ namespace DesktopApplication
         private GroupManager _groupManager;
         private StudentManager _studentManager;
         private TeacherManager _teacherManager;
+        private CourseManager _courseManager;
         private ILogger _logger;
         public MainWindow()
         {
@@ -30,6 +31,7 @@ namespace DesktopApplication
             _groupManager = new GroupManager(_context,_logger);
             _studentManager = new StudentManager(_context, _logger);
             _teacherManager = new TeacherManager(_context, _logger);
+            _courseManager = new CourseManager(_context, _logger);
 
 
         }
@@ -46,6 +48,11 @@ namespace DesktopApplication
         private void ManageTeachers_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new TeacherManagementPage(_teacherManager));
+        }
+
+        private void ManageCourses_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new CourseManagementPage(_courseManager));
         }
 
         public void NavigateToMainContent()

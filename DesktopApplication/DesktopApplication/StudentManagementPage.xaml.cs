@@ -43,21 +43,29 @@ namespace DesktopApplication
 
         private async void AddStudent_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (GroupComboBox.SelectedValue != null)
             {
-                var studentRecord = new PersonRecord
+                try
                 {
-                    FirstName = FirstNameTextBox.Text,
-                    LastName = LastNameTextBox.Text
-                };
+                    var studentRecord = new PersonRecord
+                    {
+                        FirstName = FirstNameTextBox.Text,
+                        LastName = LastNameTextBox.Text
+                    };
 
-                await _studentManager.AddStudentAsync(studentRecord, (int)GroupComboBox.SelectedValue);
-                LoadData();
+                    await _studentManager.AddStudentAsync(studentRecord, (int)GroupComboBox.SelectedValue);
+                    LoadData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error adding student: {ex.Message}");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Error adding student: {ex.Message}");
+                MessageBox.Show($"Please select group for student");
             }
+
         }
 
         private async void UpdateStudent_Click(object sender, RoutedEventArgs e)

@@ -50,14 +50,21 @@ namespace DesktopApplication.Services
             // Check if a group with the same name already exists within the same course
             var existingGroup = await _context.Groups
                                               .FirstOrDefaultAsync(g => g.Name == groupName && g.CourseId == courseId);
-
+            var groupWithSameTeacher = await _context.Groups
+                .Where(g =>  g.TeacherId == teacherId )
+                .FirstOrDefaultAsync();
             if (existingGroup != null)
             {
                 _logger.Warning("A group with the same name '{GroupName}' already exists in course '{CourseId}'", groupName, courseId);
                 MessageBox.Show($"A group with the same name '{groupName}' currently exists in this course. You can change the name or create it in another course.");
                 return;
             }
-
+            else if (groupWithSameTeacher != null)
+            {
+                _logger.Warning("A group with TeacherId '{TeacherId}' already exists", teacherId);
+                MessageBox.Show("The teacher is already assigned to another group. Please choose another teacher.");
+                return;
+            }
             var newGroup = new Group
             {
                 Name = groupName,
@@ -84,7 +91,7 @@ namespace DesktopApplication.Services
 
             // Check if the teacher is already assigned to another group within the same course
             var groupWithSameTeacher = await _context.Groups
-                .Where(g => g.CourseId == courseId && g.TeacherId == teacherId && g.GroupId != groupId)
+                .Where(g => g.TeacherId == teacherId && g.GroupId != groupId)
                 .FirstOrDefaultAsync();
 
             if (groupWithSameName != null)
@@ -96,8 +103,8 @@ namespace DesktopApplication.Services
 
             if (groupWithSameTeacher != null)
             {
-                _logger.Warning("A group with TeacherId '{TeacherId}' already exists in the course '{CourseId}'", teacherId, courseId);
-                MessageBox.Show("The teacher is already assigned to another group in this course. Please choose another teacher.");
+                _logger.Warning("A group with TeacherId '{TeacherId}' already exists", teacherId);
+                MessageBox.Show("The teacher is already assigned to another group. Please choose another teacher.");
                 return;
             }
 

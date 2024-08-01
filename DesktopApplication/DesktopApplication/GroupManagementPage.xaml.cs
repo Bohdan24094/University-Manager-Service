@@ -33,9 +33,16 @@ namespace DesktopApplication
 
         private async void CreateGroup_Click(object sender, RoutedEventArgs e)
         {
-            await _groupManager.CreateGroupAsync(GroupNameTextBox.Text, (int)CourseComboBox.SelectedValue, (int)TeacherComboBox.SelectedValue);
-            MessageBox.Show("Group crated succesfully");
-            LoadData();
+            if ( CourseComboBox.SelectedValue!= null && TeacherComboBox.SelectedValue!=null)
+            {
+                await _groupManager.CreateGroupAsync(GroupNameTextBox.Text, (int)CourseComboBox.SelectedValue, (int)TeacherComboBox.SelectedValue);
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Please choose the existing course and teacher to attach");
+
+            }
         }
 
         private async void DeleteGroup_Click(object sender, RoutedEventArgs e)

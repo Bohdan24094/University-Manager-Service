@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\App.xaml
-5-1555637224
+61580187715
 
-251290422707
+27-1528613986
 268584764180
-GroupManagementPage.xaml;MainContent.xaml;MainWindow.xaml;StudentManagementPage.xaml;TeacherManagementPage.xaml;
+CourseManagementPage.xaml;GroupManagementPage.xaml;MainContent.xaml;MainWindow.xaml;StudentManagementPage.xaml;TeacherManagementPage.xaml;
 
 False
 
