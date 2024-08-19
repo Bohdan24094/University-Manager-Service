@@ -1,39 +1,55 @@
 ﻿using DesktopApplication.Services;
 using DesktopApplication.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using DesktopApplication.Models;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace DesktopApplication
 {
     /// <summary>
     /// Interaction logic for CourseManagementPage.xaml
     /// </summary>
-    public partial class CourseManagementPage : Page
+    public partial class CourseManagementPage : Page, INotifyPropertyChanged
     {
         private readonly CourseManager _courseManager;
+        public ObservableCollection<Course> Courses { get; set; }
+
+        private Course _selectedCourse;
+        public Course SelectedCourse
+        {
+            get => _selectedCourse;
+            set
+            {
+                _selectedCourse = value;
+                OnPropertyChanged();
+                if (_selectedCourse != null)
+                {
+                    NameTextBox.Text = _selectedCourse.Name;
+                    DescriptionTextBox.Text = _selectedCourse.Description;
+                }
+            }
+        }
+
         public CourseManagementPage(CourseManager courseManager)
         {
             InitializeComponent();
             _courseManager = courseManager;
+            Courses = new ObservableCollection<Course>();
+            DataContext = this;
             LoadData();
         }
+
         private async void LoadData()
         {
-            var courses = await _courseManager.GetAllTeachersAsync();
-            CourseListBox.ItemsSource = courses;
+            var courses = await _courseManager.GetAllCoursesAsync();
+            Courses.Clear();
+            foreach (var course in courses)
+            {
+                Courses.Add(course);
+            }
         }
 
         private async void AddCourse_Click(object sender, RoutedEventArgs e)
@@ -89,6 +105,12 @@ namespace DesktopApplication
             {
                 mainWindow.NavigateToMainContent();
             }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

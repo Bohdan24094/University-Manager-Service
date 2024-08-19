@@ -18,6 +18,7 @@ namespace DesktopApplication.Services
     {
         private readonly ILogger _logger;
         private  readonly UniversityContext _context;
+
         public GroupManager(UniversityContext context, ILogger logger)
         {
             _logger = logger;
@@ -47,7 +48,6 @@ namespace DesktopApplication.Services
         {
             _logger.Information("Creating new group: {GroupName}", groupName);
 
-            // Check if a group with the same name already exists within the same course
             var existingGroup = await _context.Groups
                                               .FirstOrDefaultAsync(g => g.Name == groupName && g.CourseId == courseId);
             var groupWithSameTeacher = await _context.Groups
@@ -65,6 +65,7 @@ namespace DesktopApplication.Services
                 MessageBox.Show("The teacher is already assigned to another group. Please choose another teacher.");
                 return;
             }
+
             var newGroup = new Group
             {
                 Name = groupName,
@@ -79,17 +80,14 @@ namespace DesktopApplication.Services
             MessageBox.Show($"Group '{groupName}' created successfully");
         }
 
-
         public async Task UpdateGroupAsync(int groupId, string groupName, int courseId, int teacherId)
         {
             _logger.Information("Updating group with GroupId: {GroupId}", groupId);
 
-            // Check if the new group name already exists within the same course
             var groupWithSameName = await _context.Groups
                 .Where(g => g.CourseId == courseId && g.Name == groupName && g.GroupId != groupId)
                 .FirstOrDefaultAsync();
 
-            // Check if the teacher is already assigned to another group within the same course
             var groupWithSameTeacher = await _context.Groups
                 .Where(g => g.TeacherId == teacherId && g.GroupId != groupId)
                 .FirstOrDefaultAsync();
@@ -108,7 +106,6 @@ namespace DesktopApplication.Services
                 return;
             }
 
-            // Proceed with updating the group if both checks pass
             var selectedGroup = await _context.Groups.FindAsync(groupId);
             if (selectedGroup != null)
             {
@@ -116,16 +113,17 @@ namespace DesktopApplication.Services
                 selectedGroup.CourseId = courseId;
                 selectedGroup.TeacherId = teacherId;
                 await _context.SaveChangesAsync();
-                _logger.Information("Group {GroupName} updated successfully", groupName);
-                MessageBox.Show("Group {GroupName} updated successfully", groupName);
+                string successString = "Group {GroupName} updated successfully";
+                _logger.Information(successString, groupName);
+                MessageBox.Show(successString, groupName);
             }
             else
             {
-                _logger.Warning("Group with GroupId '{GroupId}' not found", groupId);
-                MessageBox.Show("The specified group could not be found.");
+                string errorString = "The specified group could not be found.";
+                _logger.Warning(errorString, groupId);
+                MessageBox.Show(errorString);
             }
         }
-
 
         public async Task DeleteGroupAsync(int groupId)
         {
@@ -173,33 +171,29 @@ namespace DesktopApplication.Services
             var selectedGroup = _context.Groups
                                         .Include(g => g.Students)
                                         .FirstOrDefault(g => g.GroupId == groupId);
-
-            if (selectedGroup != null)
+            if (selectedGroup == null)
             {
-                var exportedStudents = selectedGroup.Students.Select(student => new StudentExport
-                {
-                    StudentId = student.StudentId,
-                    FirstName = student.FirstName,
-                    LastName = student.LastName,
-                    GroupName = selectedGroup.Name
-                }).ToList();
-
-                using (var writer = new StreamWriter(filePath))
-                using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
-                {
-                    csv.WriteRecords(exportedStudents);
-                }
-                _logger.Information("Students exported successfully for group {GroupId}", groupId);
-
+                return;
             }
-
+            var exportedStudents = selectedGroup.Students.Select(student => new StudentExport
+            {
+                StudentId = student.StudentId,
+                FirstName = student.FirstName,
+                LastName = student.LastName,
+                GroupName = selectedGroup.Name
+            }).ToList();
+            using (var writer = new StreamWriter(filePath))
+            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                csv.WriteRecords(exportedStudents);
+            }
+            _logger.Information("Students exported successfully for group {GroupId}", groupId);
         }
 
         public async Task ImportStudentsAsync(int groupId, string filePath)
         {
             _logger.Information("Importing students asynchronously for Group ID: {GroupId}", groupId);
 
-            // Ensure group exists before proceeding
             var selectedGroup = await _context.Groups
                 .Include(g => g.Students)
                 .FirstOrDefaultAsync(g => g.GroupId == groupId);
@@ -210,12 +204,10 @@ namespace DesktopApplication.Services
                 return;
             }
 
-            // Wrap the operation in a transaction
-            using (var transaction = await _context.Database.BeginTransactionAsync())
+            using var transaction = await _context.Database.BeginTransactionAsync();
             {
                 try
                 {
-                    // Load the new students from the CSV
                     using (var reader = new StreamReader(filePath))
                     using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                     {
@@ -234,7 +226,6 @@ namespace DesktopApplication.Services
                             _logger.Information("Adding student: {FirstName} {LastName} to Group: {GroupId}", newStudent.FirstName, newStudent.LastName, selectedGroup.GroupId);
                         }
                     }
-
                     await _context.SaveChangesAsync();
                     await transaction.CommitAsync();
                     _logger.Information("Students imported successfully for Group ID: {GroupId}", groupId);
@@ -247,7 +238,6 @@ namespace DesktopApplication.Services
                 }
             }
         }
-
 
         public void GenerateDocx(int groupId, string filePath)
         {
@@ -291,9 +281,7 @@ namespace DesktopApplication.Services
             else
             {
                 _logger.Warning("Group {GroupId} not found for DOCX generation", groupId);
-
             }
-
         }
 
        public void GeneratePdf(int groupId, string filePath)
@@ -301,9 +289,9 @@ namespace DesktopApplication.Services
             _logger.Information("Generating PDF for group {GroupId} at {FilePath}", groupId, filePath);
 
             var selectedGroup = _context.Groups
-                                       .Include(g => g.Course)
-                                       .Include(g => g.Students)
-                                       .FirstOrDefault(g => g.GroupId == groupId);
+                                        .Include(g => g.Course)
+                                        .Include(g => g.Students)
+                                        .FirstOrDefault(g => g.GroupId == groupId);
            if (selectedGroup != null)
            {
                using (PdfWriter writer = new PdfWriter(filePath))
@@ -311,7 +299,7 @@ namespace DesktopApplication.Services
                    PdfDocument pdf = new PdfDocument(writer);
                    iText.Layout.Document document = new iText.Layout.Document(pdf);
 
-                    iText.Layout.Element.Paragraph title = new iText.Layout.Element.Paragraph($"Course: {selectedGroup.Course.Name}")
+                   iText.Layout.Element.Paragraph title = new iText.Layout.Element.Paragraph($"Course: {selectedGroup.Course.Name}")
                        .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER)
                        .SetFontSize(20);
                    document.Add(title);
@@ -327,7 +315,6 @@ namespace DesktopApplication.Services
                        document.Add(new iText.Layout.Element.Paragraph($"{index}. {student.FirstName} {student.LastName}"));
                        index++;
                    }
-       
                    document.Close();
                }
                 _logger.Information("PDF generated successfully for group {GroupId}", groupId);
@@ -337,6 +324,5 @@ namespace DesktopApplication.Services
                 _logger.Warning("Group {GroupId} not found for PDF generation", groupId);   
             }
         }
-
     }
 }

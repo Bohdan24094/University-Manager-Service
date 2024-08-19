@@ -14,7 +14,7 @@
             <Button Content="Manage Courses" DockPanel.Dock="Top" Click="ManageCourses_Click" Margin="5"/>
 
         </StackPanel>
-        
-        <Frame x:Name="MainFrame" DockPanel.Dock="Top"/>
+
+        <Frame x:Name="MainFrame" DockPanel.Dock="Top" JournalOwnership="OwnsJournal"/>
     </DockPanel>
 </Window>

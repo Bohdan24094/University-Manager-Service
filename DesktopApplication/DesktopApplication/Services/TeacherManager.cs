@@ -15,7 +15,6 @@ namespace DesktopApplication.Services
     {
         private readonly UniversityContext _context;
         private readonly ILogger _logger;
-
         public TeacherManager(UniversityContext context, ILogger logger)
         {
             _context = context;
@@ -32,11 +31,9 @@ namespace DesktopApplication.Services
         {
             _logger.Information("Adding a new teacher: {FirstName} {LastName}", teacherRecord.FirstName, teacherRecord.LastName);
 
-            var newTeacher = new Teacher
-            {
-                FirstName = teacherRecord.FirstName,
-                LastName = teacherRecord.LastName
-            };
+            var newTeacher = new Teacher();
+            PopulateTeacherFromRecord(newTeacher, teacherRecord);
+            
 
             _context.Teachers.Add(newTeacher);
             await _context.SaveChangesAsync();
@@ -54,11 +51,16 @@ namespace DesktopApplication.Services
                 throw new Exception("Teacher not found");
             }
 
-            teacher.FirstName = teacherRecord.FirstName;
-            teacher.LastName = teacherRecord.LastName;
+            PopulateTeacherFromRecord(teacher, teacherRecord);
 
             await _context.SaveChangesAsync();
             _logger.Information("Teacher {TeacherId} updated successfully", teacherId);
+        }
+
+        private void PopulateTeacherFromRecord(Teacher teacher, PersonRecord teacherRecord)
+        {
+            teacher.FirstName = teacherRecord.FirstName;
+            teacher.LastName = teacherRecord.LastName;
         }
 
         public async Task DeleteTeacherAsync(int teacherId)
@@ -71,24 +73,15 @@ namespace DesktopApplication.Services
                 _logger.Warning("Teacher ID {TeacherId} not found", teacherId);
                 throw new Exception("Teacher not found");
             }
-
-            // Check for groups associated with this teacher
             var groupsWithTeacher = await _context.Groups
                                                   .Where(g => g.TeacherId == teacherId)
                                                   .ToListAsync();
-
             if (groupsWithTeacher.Any())
             {
-                // Notify the user of the association
                 _logger.Warning("Cannot delete teacher {TeacherId} because they are assigned to groups: {GroupIds}", teacherId, string.Join(", ", groupsWithTeacher.Select(g => g.GroupId)));
-
-                // Present a message to the user
                 MessageBox.Show($"Cannot delete the teacher '{teacher.FirstName} {teacher.LastName}' because they are assigned to groups. Please reassign those groups to a different teacher before deletion.");
-
-                return; // Exit the method
+                return; 
             }
-
-            // No groups associated, safe to delete
             _context.Teachers.Remove(teacher);
             await _context.SaveChangesAsync();
             _logger.Information("Teacher {TeacherId} deleted successfully", teacherId);

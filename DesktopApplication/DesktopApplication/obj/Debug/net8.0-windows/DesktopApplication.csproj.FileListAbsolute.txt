@@ -173,3 +173,9 @@ C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApp
 C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\obj\Debug\net8.0-windows\TeacherManagementPage.baml
 C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\obj\Debug\net8.0-windows\CourseManagementPage.g.cs
 C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\obj\Debug\net8.0-windows\CourseManagementPage.baml
+C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\bin\Debug\net8.0-windows\Castle.Core.dll
+C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\bin\Debug\net8.0-windows\Moq.dll
+C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\bin\Debug\net8.0-windows\xunit.abstractions.dll
+C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\bin\Debug\net8.0-windows\xunit.assert.dll
+C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\bin\Debug\net8.0-windows\xunit.core.dll
+C:\Users\bobko\Development\wpf-desktop-application\DesktopApplication\DesktopApplication\bin\Debug\net8.0-windows\xunit.execution.dotnet.dll

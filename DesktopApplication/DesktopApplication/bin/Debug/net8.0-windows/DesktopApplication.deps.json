@@ -9,20 +9,22 @@
       "DesktopApplication/1.0.0": {
         "dependencies": {
           "CsvHelper": "33.0.1",
-          "DocumentFormat.OpenXml": "3.0.2",
-          "Microsoft.EntityFrameworkCore": "8.0.7",
-          "Microsoft.EntityFrameworkCore.Design": "8.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
-          "Microsoft.EntityFrameworkCore.Tools": "8.0.7",
+          "DocumentFormat.OpenXml": "3.1.0",
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Design": "8.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Tools": "8.0.8",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Moq": "4.20.70",
           "Serilog": "4.0.1",
           "Serilog.Extensions.Logging": "8.0.0",
           "Serilog.Sinks.Console": "6.0.0",
           "Serilog.Sinks.File": "6.0.0",
           "itext7": "8.0.5",
-          "itext7.bouncy-castle-adapter": "8.0.5"
+          "itext7.bouncy-castle-adapter": "8.0.5",
+          "xunit": "2.9.0"
         },
         "runtime": {
           "DesktopApplication.dll": {}
@@ -70,6 +72,17 @@
           }
         }
       },
+      "Castle.Core/5.1.1": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.1.0"
+          }
+        }
+      },
       "CsvHelper/33.0.1": {
         "runtime": {
           "lib/net8.0/CsvHelper.dll": {
@@ -78,25 +91,25 @@
           }
         }
       },
-      "DocumentFormat.OpenXml/3.0.2": {
+      "DocumentFormat.OpenXml/3.1.0": {
         "dependencies": {
-          "DocumentFormat.OpenXml.Framework": "3.0.2"
+          "DocumentFormat.OpenXml.Framework": "3.1.0"
         },
         "runtime": {
           "lib/net8.0/DocumentFormat.OpenXml.dll": {
-            "assemblyVersion": "3.0.2.0",
-            "fileVersion": "3.0.2.0"
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
           }
         }
       },
-      "DocumentFormat.OpenXml.Framework/3.0.2": {
+      "DocumentFormat.OpenXml.Framework/3.1.0": {
         "dependencies": {
           "System.IO.Packaging": "8.0.0"
         },
         "runtime": {
           "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
-            "assemblyVersion": "3.0.2.0",
-            "fileVersion": "3.0.2.0"
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
           }
         }
       },
@@ -516,71 +529,71 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/8.0.7": {
+      "Microsoft.EntityFrameworkCore/8.0.8": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.7",
-          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.7",
+          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.8",
           "Microsoft.Extensions.Caching.Memory": "8.0.0",
           "Microsoft.Extensions.Logging": "8.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.dll": {
-            "assemblyVersion": "8.0.7.0",
-            "fileVersion": "8.0.724.31404"
+            "assemblyVersion": "8.0.8.0",
+            "fileVersion": "8.0.824.36704"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/8.0.7": {
+      "Microsoft.EntityFrameworkCore.Abstractions/8.0.8": {
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "assemblyVersion": "8.0.7.0",
-            "fileVersion": "8.0.724.31404"
+            "assemblyVersion": "8.0.8.0",
+            "fileVersion": "8.0.824.36704"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/8.0.7": {},
-      "Microsoft.EntityFrameworkCore.Design/8.0.7": {
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.8": {},
+      "Microsoft.EntityFrameworkCore.Design/8.0.8": {
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.5.0",
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.7",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.8",
           "Microsoft.Extensions.DependencyModel": "8.0.1",
           "Mono.TextTemplating": "2.2.1"
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Design.dll": {
-            "assemblyVersion": "8.0.7.0",
-            "fileVersion": "8.0.724.31404"
+            "assemblyVersion": "8.0.8.0",
+            "fileVersion": "8.0.824.36704"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/8.0.7": {
+      "Microsoft.EntityFrameworkCore.Relational/8.0.8": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.7",
+          "Microsoft.EntityFrameworkCore": "8.0.8",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "8.0.7.0",
-            "fileVersion": "8.0.724.31404"
+            "assemblyVersion": "8.0.8.0",
+            "fileVersion": "8.0.824.36704"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/8.0.7": {
+      "Microsoft.EntityFrameworkCore.SqlServer/8.0.8": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "5.1.5",
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.7"
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.8"
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
-            "assemblyVersion": "8.0.7.0",
-            "fileVersion": "8.0.724.31404"
+            "assemblyVersion": "8.0.8.0",
+            "fileVersion": "8.0.824.36704"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/8.0.7": {
+      "Microsoft.EntityFrameworkCore.Tools/8.0.8": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "8.0.7"
+          "Microsoft.EntityFrameworkCore.Design": "8.0.8"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
@@ -964,6 +977,17 @@
           }
         }
       },
+      "Moq/4.20.70": {
+        "dependencies": {
+          "Castle.Core": "5.1.1"
+        },
+        "runtime": {
+          "lib/net6.0/Moq.dll": {
+            "assemblyVersion": "4.20.70.0",
+            "fileVersion": "4.20.70.0"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -1170,6 +1194,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
+      "System.Diagnostics.EventLog/6.0.0": {},
       "System.Diagnostics.Process/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -1604,6 +1629,58 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "xunit/2.9.0": {
+        "dependencies": {
+          "xunit.analyzers": "1.15.0",
+          "xunit.assert": "2.9.0",
+          "xunit.core": "2.9.0"
+        }
+      },
+      "xunit.abstractions/2.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "xunit.analyzers/1.15.0": {},
+      "xunit.assert/2.9.0": {
+        "runtime": {
+          "lib/net6.0/xunit.assert.dll": {
+            "assemblyVersion": "2.9.0.0",
+            "fileVersion": "2.9.0.0"
+          }
+        }
+      },
+      "xunit.core/2.9.0": {
+        "dependencies": {
+          "xunit.extensibility.core": "2.9.0",
+          "xunit.extensibility.execution": "2.9.0"
+        }
+      },
+      "xunit.extensibility.core/2.9.0": {
+        "dependencies": {
+          "xunit.abstractions": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.core.dll": {
+            "assemblyVersion": "2.9.0.0",
+            "fileVersion": "2.9.0.0"
+          }
+        }
+      },
+      "xunit.extensibility.execution/2.9.0": {
+        "dependencies": {
+          "xunit.extensibility.core": "2.9.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.execution.dotnet.dll": {
+            "assemblyVersion": "2.9.0.0",
+            "fileVersion": "2.9.0.0"
+          }
+        }
       }
     }
   },
@@ -1634,6 +1711,13 @@
       "path": "bouncycastle.cryptography/2.2.1",
       "hashPath": "bouncycastle.cryptography.2.2.1.nupkg.sha512"
     },
+    "Castle.Core/5.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
+      "path": "castle.core/5.1.1",
+      "hashPath": "castle.core.5.1.1.nupkg.sha512"
+    },
     "CsvHelper/33.0.1": {
       "type": "package",
       "serviceable": true,
@@ -1641,19 +1725,19 @@
       "path": "csvhelper/33.0.1",
       "hashPath": "csvhelper.33.0.1.nupkg.sha512"
     },
-    "DocumentFormat.OpenXml/3.0.2": {
+    "DocumentFormat.OpenXml/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gqjP/BxKWgwAWwPAN+RpKaMOiidPM07F+mAxiiW184/MnkHnkk12Qo7cRB0wuq4kOZUrUzQ9EUO966hUy/wKBw==",
-      "path": "documentformat.openxml/3.0.2",
-      "hashPath": "documentformat.openxml.3.0.2.nupkg.sha512"
+      "sha512": "sha512-J+GtIzVJpj6Wbhc2sYqmXEqAi2LYgWkU5LdVE/vCtNRr8WHDLHRL0lTbSlvTeLzSI5Ws6AC6TPuJR68/3wsa4A==",
+      "path": "documentformat.openxml/3.1.0",
+      "hashPath": "documentformat.openxml.3.1.0.nupkg.sha512"
     },
-    "DocumentFormat.OpenXml.Framework/3.0.2": {
+    "DocumentFormat.OpenXml.Framework/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ILRCJu2dUJDv27ZCQDftD7AZSuBgKg+ZSUF9dg2dk8qcIED7oM42y/cvZIm0mev80nj2QMzpxthX87+AebzHug==",
-      "path": "documentformat.openxml.framework/3.0.2",
-      "hashPath": "documentformat.openxml.framework.3.0.2.nupkg.sha512"
+      "sha512": "sha512-yz78IAteV+/jdpmQRlBIfhsmYfDYqgPSyPUsyT7KnfDlTTvqY6Zf5inMjTSwe2bnN8wv9dLD0C2sAkActXIy/A==",
+      "path": "documentformat.openxml.framework/3.1.0",
+      "hashPath": "documentformat.openxml.framework.3.1.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1767,54 +1851,54 @@
       "path": "microsoft.dotnet.platformabstractions/1.1.0",
       "hashPath": "microsoft.dotnet.platformabstractions.1.1.0.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore/8.0.7": {
+    "Microsoft.EntityFrameworkCore/8.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UOyPNAgyzw/E4hUCurqvZxi0WWVLQAGZuntFPzkTXtvJLTqRjKvokvhv+XazAUSODLsU1DZ67GjZ4mT9d82+0g==",
-      "path": "microsoft.entityframeworkcore/8.0.7",
-      "hashPath": "microsoft.entityframeworkcore.8.0.7.nupkg.sha512"
+      "sha512": "sha512-iK+jrJzkfbIxutB7or808BPmJtjUEi5O+eSM7cLDwsyde6+3iOujCSfWnrHrLxY3u+EQrJD+aD8DJ6ogPA2Rtw==",
+      "path": "microsoft.entityframeworkcore/8.0.8",
+      "hashPath": "microsoft.entityframeworkcore.8.0.8.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/8.0.7": {
+    "Microsoft.EntityFrameworkCore.Abstractions/8.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DHX6nxcg4/tpWfTjAleKrXveDiNFY/OGOK6nm27GipUXNI2Uofev9cH5SYXmtGIgHWxlvfn754TXN4WnrixOwg==",
-      "path": "microsoft.entityframeworkcore.abstractions/8.0.7",
-      "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.7.nupkg.sha512"
+      "sha512": "sha512-9mMQkZsfL1c2iifBD8MWRmwy59rvsVtR9NOezJj7+g1j4P7g49MJHd8k8faC/v7d5KuHkQ6KOQiSItvoRt9PXA==",
+      "path": "microsoft.entityframeworkcore.abstractions/8.0.8",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/8.0.7": {
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nerD0vEOYJVhVapamRVH9DrUYbDNMJ5bPfWze4SibDDaDaekzgwQqBht97/tV+8pgdKoPAXmtiJsB+lDajwVrQ==",
-      "path": "microsoft.entityframeworkcore.analyzers/8.0.7",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.7.nupkg.sha512"
+      "sha512": "sha512-OlAXMU+VQgLz5y5/SBkLvAa9VeiR3dlJqgIebEEH2M2NGA3evm68/Tv7SLWmSxwnEAtA3nmDEZF2pacK6eXh4Q==",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.8",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Design/8.0.7": {
+    "Microsoft.EntityFrameworkCore.Design/8.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EUPY49Hi5BbpnkiX9ik/2fD9GPEbvKx6wvDmDNZTHZGlXAg1kcR9vt2QA2af1mIoa7gG1wqEvyQRWf9/A8gWqQ==",
-      "path": "microsoft.entityframeworkcore.design/8.0.7",
-      "hashPath": "microsoft.entityframeworkcore.design.8.0.7.nupkg.sha512"
+      "sha512": "sha512-MmQAMHdjZR8Iyn/FVQrh9weJQTn0HqtKa3vELS9ffQJat/qXgnTam9M9jqvePphjkYp5Scee+Hy+EJR4nmWmOA==",
+      "path": "microsoft.entityframeworkcore.design/8.0.8",
+      "hashPath": "microsoft.entityframeworkcore.design.8.0.8.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/8.0.7": {
+    "Microsoft.EntityFrameworkCore.Relational/8.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Hn86yScnW+VXb+A2LGrVGkGmjsQ9KLWR0T8GQBEcESWk8u9JYhBiRtdxz76Aq0ir82Ei48sLEZTN4VE0sJ3yIg==",
-      "path": "microsoft.entityframeworkcore.relational/8.0.7",
-      "hashPath": "microsoft.entityframeworkcore.relational.8.0.7.nupkg.sha512"
+      "sha512": "sha512-3WnrwdXxKg4L98cDx0lNEEau8U2lsfuBJCs0Yzht+5XVTmahboM7MukKfQHAzVsHUPszm6ci929S7Qas0WfVHA==",
+      "path": "microsoft.entityframeworkcore.relational/8.0.8",
+      "hashPath": "microsoft.entityframeworkcore.relational.8.0.8.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/8.0.7": {
+    "Microsoft.EntityFrameworkCore.SqlServer/8.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6gwbwmXkCb+IGxTQ81KqwGjN15r3bv7PLlb4Ox/cYDqdPFbHXMsk0zgtKyPCiXqkFH2LG7KpvVYUBlu4PyTKZQ==",
-      "path": "microsoft.entityframeworkcore.sqlserver/8.0.7",
-      "hashPath": "microsoft.entityframeworkcore.sqlserver.8.0.7.nupkg.sha512"
+      "sha512": "sha512-A2F52W+hnGqvprx37HcAnYnJv4QoFFdc9cxd/QGNSd1vCu1I0eAEKRd0r9KS3E5I5RRj/m9XJfYCyTdy1cdn5Q==",
+      "path": "microsoft.entityframeworkcore.sqlserver/8.0.8",
+      "hashPath": "microsoft.entityframeworkcore.sqlserver.8.0.8.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Tools/8.0.7": {
+    "Microsoft.EntityFrameworkCore.Tools/8.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-i85BNsjYGjAkvvga9uALKREHq/hsp/y7QOGuliczDSnUN6YIQXgx989XBg8iSkb5tZJqU/NLev1mU4XmirAvOw==",
-      "path": "microsoft.entityframeworkcore.tools/8.0.7",
-      "hashPath": "microsoft.entityframeworkcore.tools.8.0.7.nupkg.sha512"
+      "sha512": "sha512-wjDNbLJk86QpZt2JxJuNVzpBKIbEQsgcJYHGeIFTBuK6NEgvJvyxgneg059HfSJmTVdInZ61lTO4sJGCfFr7+w==",
+      "path": "microsoft.entityframeworkcore.tools/8.0.8",
+      "hashPath": "microsoft.entityframeworkcore.tools.8.0.8.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
       "type": "package",
@@ -2046,6 +2130,13 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "Moq/4.20.70": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4rNnAwdpXJBuxqrOCzCyICXHSImOTRktCgCWXWykuF1qwoIsVvEnR7PjbMk/eLOxWvhmj5Kwt+kDV3RGUYcNwg==",
+      "path": "moq/4.20.70",
+      "hashPath": "moq.4.20.70.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
@@ -2284,6 +2375,13 @@
       "sha512": "sha512-KiLYDu2k2J82Q9BJpWiuQqCkFjRBWVq4jDzKKWawVi9KWzyD0XG3cmfX0vqTQlL14Wi9EufJrbL0+KCLTbqWiQ==",
       "path": "system.diagnostics.diagnosticsource/6.0.1",
       "hashPath": "system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
+      "path": "system.diagnostics.eventlog/6.0.0",
+      "hashPath": "system.diagnostics.eventlog.6.0.0.nupkg.sha512"
     },
     "System.Diagnostics.Process/4.3.0": {
       "type": "package",
@@ -2683,6 +2781,55 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "xunit/2.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PtU3rZ0ThdmdJqTbK7GkgFf6iBaCR6Q0uvJHznID+XEYk2v6O/b7sRxqnbi3B2gRDXxjTqMkVNayzwsqsFUxRw==",
+      "path": "xunit/2.9.0",
+      "hashPath": "xunit.2.9.0.nupkg.sha512"
+    },
+    "xunit.abstractions/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pot1I4YOxlWjIb5jmwvvQNbTrZ3lJQ+jUGkGjWE3hEFM0l5gOnBWS+H3qsex68s5cO52g+44vpGzhAt+42vwKg==",
+      "path": "xunit.abstractions/2.0.3",
+      "hashPath": "xunit.abstractions.2.0.3.nupkg.sha512"
+    },
+    "xunit.analyzers/1.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-s+M8K/Rtlgr6CmD7AYQKrNTvT5sh0l0ZKDoZ3Z/ExhlIwfV9mGAMR4f7KqIB7SSK7ZOhqDTgTUMYPmKfmvWUWQ==",
+      "path": "xunit.analyzers/1.15.0",
+      "hashPath": "xunit.analyzers.1.15.0.nupkg.sha512"
+    },
+    "xunit.assert/2.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z/1pyia//860wEYTKn6Q5dmgikJdRjgE4t5AoxJkK8oTmidzPLEPG574kmm7LFkMLbH6Frwmgb750kcyR+hwoA==",
+      "path": "xunit.assert/2.9.0",
+      "hashPath": "xunit.assert.2.9.0.nupkg.sha512"
+    },
+    "xunit.core/2.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uRaop9tZsZMCaUS4AfbSPGYHtvywWnm8XXFNUqII7ShWyDBgdchY6gyDNgO4AK1Lv/1NNW61Zq63CsDV6oH6Jg==",
+      "path": "xunit.core/2.9.0",
+      "hashPath": "xunit.core.2.9.0.nupkg.sha512"
+    },
+    "xunit.extensibility.core/2.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zjDEUSxsr6UNij4gIwCgMqQox+oLDPRZ+mubwWLci+SssPBFQD1xeRR4SvgBuXqbE0QXCJ/STVTp+lxiB5NLVA==",
+      "path": "xunit.extensibility.core/2.9.0",
+      "hashPath": "xunit.extensibility.core.2.9.0.nupkg.sha512"
+    },
+    "xunit.extensibility.execution/2.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5ZTQZvmPLlBw6QzCOwM0KnMsZw6eGjbmC176QHZlcbQoMhGIeGcYzYwn5w9yXxf+4phtplMuVqTpTbFDQh2bqQ==",
+      "path": "xunit.extensibility.execution/2.9.0",
+      "hashPath": "xunit.extensibility.execution.2.9.0.nupkg.sha512"
     }
   }
 }

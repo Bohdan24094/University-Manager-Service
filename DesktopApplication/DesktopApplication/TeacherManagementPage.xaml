@@ -18,20 +18,26 @@
         </StackPanel>
 
         <!-- Teacher List -->
-        <ListBox x:Name="TeacherListBox" DisplayMemberPath="LastName" SelectionChanged="TeacherListBox_SelectionChanged" Margin="5"/>
+        <ListBox DockPanel.Dock="Left" Width="200"
+            x:Name="TeacherListBox" 
+            DisplayMemberPath="LastName" 
+            SelectionChanged="TeacherListBox_SelectionChanged" Margin="5"/>
 
         <!-- Teacher Details -->
         <Grid Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <TextBlock Text="First Name:" Grid.Row="0" Margin="5"/>
-            <TextBox x:Name="FirstNameTextBox" Grid.Row="0" Margin="5, 0, 0, 5"/>
+            <TextBox x:Name="FirstNameTextBox" Grid.Row="1" Margin="5, 0, 0, 5"/>
 
-            <TextBlock Text="Last Name:" Grid.Row="1" Margin="5"/>
-            <TextBox x:Name="LastNameTextBox" Grid.Row="1" Margin="5, 0, 0, 5"/>
+            <TextBlock Text="Last Name:" Grid.Row="2" Margin="5"/>
+            <TextBox x:Name="LastNameTextBox" Grid.Row="3" Margin="5, 0, 0, 5"/>
         </Grid>
     </DockPanel>
 </Page>

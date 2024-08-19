@@ -18,7 +18,6 @@ namespace DesktopApplication
             _groupManager = groupManager;
             LoadData();
         }
-
         private async void LoadData()
         {
             var groups =await _groupManager.GetAllGroupsAsync();

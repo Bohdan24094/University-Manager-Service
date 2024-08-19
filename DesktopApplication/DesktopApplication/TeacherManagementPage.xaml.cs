@@ -60,7 +60,11 @@ namespace DesktopApplication
 
         private async void UpdateTeacher_Click(object sender, RoutedEventArgs e)
         {
-            if (TeacherListBox.SelectedItem is Teacher selectedTeacher)
+            if (TeacherListBox.SelectedItem is not Teacher selectedTeacher)
+            {
+                MessageBox.Show("No teacher selected. Please select a teacher before updating.");
+            }
+            else
             {
                 try
                 {
@@ -82,7 +86,11 @@ namespace DesktopApplication
 
         private async void DeleteTeacher_Click(object sender, RoutedEventArgs e)
         {
-            if (TeacherListBox.SelectedItem is Teacher selectedTeacher)
+            if (TeacherListBox.SelectedItem is not Teacher selectedTeacher)
+            {
+                MessageBox.Show("No teacher selected. Please select a teacher before deleting.");
+            }
+            else
             {
                 try
                 {
@@ -95,6 +103,8 @@ namespace DesktopApplication
                 }
             }
         }
+
+
         private void ReturnToMainWindow_Click(object sender, RoutedEventArgs e)
         {
             if (Application.Current.MainWindow is MainWindow mainWindow)

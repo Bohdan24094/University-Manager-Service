@@ -14,7 +14,6 @@ namespace DesktopApplication.Services
     {
         private readonly UniversityContext _context;
         private readonly ILogger _logger;
-
         public StudentManager(UniversityContext context, ILogger logger)
         {
             _context = context;
@@ -38,12 +37,9 @@ namespace DesktopApplication.Services
                 throw new Exception("Group not found");
             }
 
-            var newStudent = new Student
-            {
-                FirstName = studentRecord.FirstName,
-                LastName = studentRecord.LastName,
-                Group = group
-            };
+            var newStudent = new Student();
+            PopulateStudentFromRecord(newStudent, studentRecord, group);
+
 
             _context.Students.Add(newStudent);
             await _context.SaveChangesAsync();
@@ -61,11 +57,21 @@ namespace DesktopApplication.Services
                 throw new Exception("Student not found");
             }
 
-            student.FirstName = studentRecord.FirstName;
-            student.LastName = studentRecord.LastName;
+            PopulateStudentFromRecord(student, studentRecord);
 
             await _context.SaveChangesAsync();
             _logger.Information("Student {StudentId} updated successfully", studentId);
+        }
+
+        private void PopulateStudentFromRecord(Student student, PersonRecord studentRecord, Group group = null)
+        {
+            student.FirstName = studentRecord.FirstName;
+            student.LastName = studentRecord.LastName;
+
+            if (group != null)
+            {
+                student.Group = group;
+            }
         }
 
         public async Task DeleteStudentAsync(int studentId)
@@ -82,7 +88,6 @@ namespace DesktopApplication.Services
             _context.Students.Remove(student);
             await _context.SaveChangesAsync();
             _logger.Information("Student {StudentId} deleted successfully", studentId);
-
         }
     }
 }

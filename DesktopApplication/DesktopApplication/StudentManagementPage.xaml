@@ -17,24 +17,38 @@
         </StackPanel>
 
         <!-- Student List -->
-        <ListBox x:Name="StudentListBox" DisplayMemberPath="LastName" SelectionChanged="StudentListBox_SelectionChanged" Margin="5"/>
+        <ListBox DockPanel.Dock="Left" Width="200"
+                x:Name="StudentListBox" 
+                 DisplayMemberPath="LastName"
+                 SelectionChanged="StudentListBox_SelectionChanged" Margin="5"/>
 
         <!-- Student Details -->
         <Grid Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
+                <!-- For Group Name Label -->
                 <RowDefinition Height="Auto"/>
+                <!-- For Group Name TextBox -->
                 <RowDefinition Height="Auto"/>
+                <!-- For Teacher Label -->
+                <RowDefinition Height="Auto"/>
+                <!-- For Teacher ComboBox -->
+                <RowDefinition Height="Auto"/>
+                <!-- For Course Label -->
+                <RowDefinition Height="Auto"/>
+                <!-- For Course ComboBox -->
+                <RowDefinition Height="*"/>
+                <!-- Spacer -->
             </Grid.RowDefinitions>
 
             <TextBlock Text="Student First Name:" Grid.Row="0" Margin="5"/>
-            <TextBox x:Name="FirstNameTextBox" Grid.Row="0" Margin="5, 0, 0, 5"/>
+            <TextBox x:Name="FirstNameTextBox" Grid.Row="1" Margin="5, 0, 0, 5"/>
 
-            <TextBlock Text="Student Last Name:" Grid.Row="1" Margin="5"/>
-            <TextBox x:Name="LastNameTextBox" Grid.Row="1" Margin="5, 0, 0, 5"/>
+            <TextBlock Text="Student Last Name:" Grid.Row="2" Margin="5"/>
+            <TextBox x:Name="LastNameTextBox" Grid.Row="3" Margin="5, 0, 0, 5"/>
 
-            <TextBlock Text="Group:" Grid.Row="2" Margin="5"/>
-            <ComboBox x:Name="GroupComboBox" DisplayMemberPath="Name" SelectedValuePath="GroupId" Grid.Row="2" Margin="5, 0, 0, 5"/>
+            <TextBlock Text="Group:" Grid.Row="4" Margin="5"/>
+            <ComboBox x:Name="GroupComboBox" DisplayMemberPath="Name" SelectedValuePath="GroupId" Grid.Row="5" Margin="5, 0, 0, 5"/>
         </Grid>
     </DockPanel>
 </Page>
