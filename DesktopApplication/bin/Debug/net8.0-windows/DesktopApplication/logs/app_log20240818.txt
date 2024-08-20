@@ -1,0 +1,6 @@
+2024-08-18 19:50:12.315 +03:00 [INF] Fetching all teachers
+2024-08-18 19:50:13.144 +03:00 [INF] Fetching all students
+2024-08-18 19:50:13.880 +03:00 [INF] Fetching all courses
+2024-08-18 19:50:19.130 +03:00 [INF] Fetching all students
+2024-08-18 19:50:21.784 +03:00 [INF] Fetching all teachers
+2024-08-18 19:53:24.160 +03:00 [INF] Application Shutting Down

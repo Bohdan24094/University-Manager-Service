@@ -1,0 +1,3 @@
+2024-08-20 15:56:24.462 +03:00 [INF] Fetching all teachers
+2024-08-20 15:56:25.907 +03:00 [INF] Fetching all students
+2024-08-20 15:56:27.510 +03:00 [INF] Fetching all courses

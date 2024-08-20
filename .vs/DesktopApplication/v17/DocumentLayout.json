@@ -1,0 +1,65 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|c:\\users\\bobko\\development\\wpf-desktop-application\\desktopapplication\\groupmanagementpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\groupmanagementpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|C:\\Users\\bobko\\Development\\wpf-desktop-application\\desktopapplication\\maincontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECFFEFCC-5CFF-42A2-AEC5-62AD04F3E2FE}|DesktopApplication\\DesktopApplication.csproj|solutionrelative:desktopapplication\\maincontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0849e941-4665-42e5-8dd0-e4c8da15dbd0}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GroupManagementPage.xaml",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\GroupManagementPage.xaml",
+              "RelativeDocumentMoniker": "DesktopApplication\\GroupManagementPage.xaml",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\GroupManagementPage.xaml",
+              "RelativeToolTip": "DesktopApplication\\GroupManagementPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-20T12:55:19.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainContent.xaml",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\MainContent.xaml",
+              "RelativeDocumentMoniker": "DesktopApplication\\MainContent.xaml",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\MainContent.xaml",
+              "RelativeToolTip": "DesktopApplication\\MainContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-20T12:54:39.776Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 153,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

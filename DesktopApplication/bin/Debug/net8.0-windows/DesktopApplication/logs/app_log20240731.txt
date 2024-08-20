@@ -1,0 +1,68 @@
+2024-07-31 05:43:04.030 +03:00 [INF] Creating new group: Chem-101
+2024-07-31 05:44:15.779 +03:00 [INF] Creating new group: Chem-101
+2024-07-31 06:45:55.672 +03:00 [INF] Fetching all students
+2024-07-31 06:47:14.754 +03:00 [INF] Updating student with ID: 51
+2024-07-31 06:47:14.828 +03:00 [INF] Student 51 updated successfully
+2024-07-31 06:47:14.829 +03:00 [INF] Fetching all students
+2024-07-31 06:47:21.499 +03:00 [INF] Deleting student with ID: 51
+2024-07-31 06:47:21.519 +03:00 [INF] Student 51 deleted successfully
+2024-07-31 06:47:21.519 +03:00 [INF] Fetching all students
+2024-07-31 06:47:44.688 +03:00 [INF] Adding a new student: Samuel LJackson
+2024-07-31 06:47:44.719 +03:00 [INF] Student Samuel LJackson added successfully
+2024-07-31 06:47:44.719 +03:00 [INF] Fetching all students
+2024-07-31 06:50:55.157 +03:00 [INF] Fetching all students
+2024-07-31 06:51:08.436 +03:00 [INF] Fetching all students
+2024-07-31 06:51:15.078 +03:00 [INF] Updating student with ID: 57
+2024-07-31 06:51:15.150 +03:00 [INF] Student 57 updated successfully
+2024-07-31 06:51:15.150 +03:00 [INF] Fetching all students
+2024-07-31 06:51:29.561 +03:00 [INF] Fetching all students
+2024-07-31 07:18:55.107 +03:00 [INF] Fetching all teachers
+2024-07-31 07:19:02.225 +03:00 [INF] Deleting teacher with ID: 1
+2024-07-31 07:19:02.308 +03:00 [WRN] Cannot delete teacher 1 because they are assigned to groups: 9
+2024-07-31 07:19:06.045 +03:00 [INF] Fetching all teachers
+2024-07-31 07:19:07.746 +03:00 [INF] Deleting teacher with ID: 7
+2024-07-31 07:19:07.808 +03:00 [INF] Teacher 7 deleted successfully
+2024-07-31 07:19:07.808 +03:00 [INF] Fetching all teachers
+2024-07-31 07:19:17.719 +03:00 [INF] Adding a new teacher: Diamond Aniston
+2024-07-31 07:19:17.750 +03:00 [INF] Teacher Diamond Aniston added successfully
+2024-07-31 07:19:17.750 +03:00 [INF] Fetching all teachers
+2024-07-31 07:19:34.051 +03:00 [INF] Updating group with GroupId: 9
+2024-07-31 07:19:34.075 +03:00 [INF] Group Chem-101 updated successfully
+2024-07-31 14:30:09.827 +03:00 [INF] Fetching all teachers
+2024-07-31 14:30:10.780 +03:00 [INF] Fetching all students
+2024-07-31 14:42:04.487 +03:00 [INF] Fetching all teachers
+2024-07-31 14:42:16.565 +03:00 [INF] Adding a new teacher: Isaak Newton
+2024-07-31 14:42:16.713 +03:00 [INF] Teacher Isaak Newton added successfully
+2024-07-31 14:42:16.713 +03:00 [INF] Fetching all teachers
+2024-07-31 14:53:42.816 +03:00 [INF] Creating new group: Bio-101
+2024-07-31 14:54:43.194 +03:00 [INF] Creating new group: Bio-101
+2024-07-31 14:54:43.312 +03:00 [INF] Group Bio-101 created successfully
+2024-07-31 14:55:31.514 +03:00 [INF] Clearing students in Group ID: 1002
+2024-07-31 14:55:31.530 +03:00 [INF] No students found to clear for Group ID: 1002
+2024-07-31 14:55:33.649 +03:00 [INF] Importing students asynchronously for Group ID: 1002
+2024-07-31 14:55:33.695 +03:00 [INF] Adding student: Jane MariaCuryy to Group: 1002
+2024-07-31 14:55:33.696 +03:00 [INF] Adding student: Anna MaryyCur to Group: 1002
+2024-07-31 14:55:33.696 +03:00 [INF] Adding student: Samuel LJjJackson to Group: 1002
+2024-07-31 14:55:33.696 +03:00 [INF] Adding student: Samanta FonnDerAdams to Group: 1002
+2024-07-31 14:55:33.720 +03:00 [INF] Students imported successfully for Group ID: 1002
+2024-07-31 14:56:58.839 +03:00 [INF] Fetching all students
+2024-07-31 14:57:02.326 +03:00 [INF] Deleting student with ID: 4
+2024-07-31 14:57:02.406 +03:00 [INF] Student 4 deleted successfully
+2024-07-31 14:57:02.406 +03:00 [INF] Fetching all students
+2024-07-31 14:57:03.863 +03:00 [INF] Deleting student with ID: 3
+2024-07-31 14:57:03.866 +03:00 [INF] Student 3 deleted successfully
+2024-07-31 14:57:03.866 +03:00 [INF] Fetching all students
+2024-07-31 14:57:04.828 +03:00 [INF] Deleting student with ID: 2
+2024-07-31 14:57:04.830 +03:00 [INF] Student 2 deleted successfully
+2024-07-31 14:57:04.830 +03:00 [INF] Fetching all students
+2024-07-31 14:57:05.609 +03:00 [INF] Deleting student with ID: 1
+2024-07-31 14:57:05.612 +03:00 [INF] Student 1 deleted successfully
+2024-07-31 14:57:05.612 +03:00 [INF] Fetching all students
+2024-07-31 14:57:11.505 +03:00 [INF] Fetching all students
+2024-07-31 14:57:19.944 +03:00 [INF] Application Shutting Down
+2024-07-31 14:58:06.386 +03:00 [INF] Fetching all students
+2024-07-31 14:58:13.387 +03:00 [INF] Application Shutting Down
+2024-07-31 15:47:14.752 +03:00 [INF] Creating new group: Chem-102
+2024-07-31 15:47:14.914 +03:00 [INF] Group Chem-102 created successfully
+2024-07-31 15:54:19.744 +03:00 [INF] Creating new group: Bio-101
+2024-07-31 15:54:19.787 +03:00 [WRN] A group with TeacherId '1002' already exists
