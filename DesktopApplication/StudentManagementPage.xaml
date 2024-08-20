@@ -13,7 +13,6 @@
             <Button Content="Add Student" Click="AddStudent_Click" Margin="5"/>
             <Button Content="Update Student" Click="UpdateStudent_Click" Margin="5"/>
             <Button Content="Delete Student" Click="DeleteStudent_Click" Margin="5"/>
-            <Button Content="Main Window" Click="ReturnToMainWindow_Click" Margin="5"/>
         </StackPanel>
 
         <!-- Student List -->

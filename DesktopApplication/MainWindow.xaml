@@ -12,7 +12,7 @@
             <Button Content="Manage Teachers" DockPanel.Dock="Top" Click="ManageTeachers_Click" Margin="5"/>
             <Button Content="Manage Students" DockPanel.Dock="Top" Click="ManageStudents_Click" Margin="5"/>
             <Button Content="Manage Courses" DockPanel.Dock="Top" Click="ManageCourses_Click" Margin="5"/>
-
+            <Button Content="Main Window" Click="ReturnToMainWindow_Click" Margin="5"/>
         </StackPanel>
 
         <Frame x:Name="MainFrame" DockPanel.Dock="Top" JournalOwnership="OwnsJournal"/>

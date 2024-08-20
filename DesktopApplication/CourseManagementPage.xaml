@@ -13,7 +13,6 @@
             <Button Content="Add Course" Click="AddCourse_Click" Margin="5"/>
             <Button Content="Update Course" Click="UpdateCourse_Click" Margin="5"/>
             <Button Content="Delete Course" Click="DeleteCourse_Click" Margin="5"/>
-            <Button Content="Main Window" Click="ReturnToMainWindow_Click" Margin="5"/>
         </StackPanel>
 
         <!-- Course List as a Static Size Side Panel -->

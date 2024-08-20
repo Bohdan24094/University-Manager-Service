@@ -14,7 +14,6 @@
             <Button Content="Create Group" Click="CreateGroup_Click" Margin="5"/>
             <Button Content="Delete Group" Click="DeleteGroup_Click" Margin="5"/>
             <Button Content="Update Group" Click="UpdateGroup_Click" Margin="5"/>
-            <Button Content="Main Window" Click="ReturnToMainWindow_Click" Margin="5"/>
         </StackPanel>
 
         <ListBox DockPanel.Dock="Left" Width="200"

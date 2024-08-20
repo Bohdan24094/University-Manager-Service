@@ -31,6 +31,7 @@ namespace DesktopApplication
             _studentManager = new StudentManager(_context, _logger);
             _teacherManager = new TeacherManager(_context, _logger);
             _courseManager = new CourseManager(_context, _logger);
+            NavigateToMainContent();
         }
 
         private void ClearNavigationHistory()
@@ -70,6 +71,14 @@ namespace DesktopApplication
         {
             ClearNavigationHistory();
             MainFrame.Navigate(new MainContent(_groupManager));
+        }
+
+        private void ReturnToMainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow is MainWindow mainWindow)
+            {
+                mainWindow.NavigateToMainContent();
+            }
         }
     }
 }

@@ -2,3 +2,7 @@
 2024-08-20 15:55:52.330 +03:00 [INF] Application Starting Up
 2024-08-20 16:00:46.889 +03:00 [INF] Application starting up
 2024-08-20 16:00:46.929 +03:00 [INF] Application Starting Up
+2024-08-20 18:54:47.180 +03:00 [INF] Application starting up
+2024-08-20 18:54:47.265 +03:00 [INF] Application Starting Up
+2024-08-20 18:57:19.545 +03:00 [INF] Application starting up
+2024-08-20 18:57:19.577 +03:00 [INF] Application Starting Up

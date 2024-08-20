@@ -137,14 +137,5 @@ namespace DesktopApplication
                 _groupManager.GeneratePdf(selectedGroup.GroupId, saveFileDialog.FileName);
             }
         }
-
-        private void ReturnToMainWindow_Click(object sender, RoutedEventArgs e)
-        {
-            if (Application.Current.MainWindow is MainWindow mainWindow)
-            {
-                mainWindow.NavigateToMainContent();
-            }
-        }
-    
     }
 }

@@ -1,5 +1,4 @@
 ﻿using DesktopApplication.Services;
-using DesktopApplication.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
 using DesktopApplication.Models;
@@ -97,13 +96,6 @@ namespace DesktopApplication
             {
                 NameTextBox.Text = selectedCourse.Name;
                 DescriptionTextBox.Text = selectedCourse.Description;
-            }
-        }
-        private void ReturnToMainWindow_Click(object sender, RoutedEventArgs e)
-        {
-            if (Application.Current.MainWindow is MainWindow mainWindow)
-            {
-                mainWindow.NavigateToMainContent();
             }
         }
 
