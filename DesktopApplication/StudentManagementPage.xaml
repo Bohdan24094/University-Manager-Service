@@ -1,0 +1,54 @@
+﻿<Page x:Class="DesktopApplication.StudentManagementPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DesktopApplication"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StudentManagementPage" Background="White">
+    <DockPanel>
+        <!-- Toolbar -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Button Content="Add Student" Click="AddStudent_Click" Margin="5"/>
+            <Button Content="Update Student" Click="UpdateStudent_Click" Margin="5"/>
+            <Button Content="Delete Student" Click="DeleteStudent_Click" Margin="5"/>
+            <Button Content="Main Window" Click="ReturnToMainWindow_Click" Margin="5"/>
+        </StackPanel>
+
+        <!-- Student List -->
+        <ListBox DockPanel.Dock="Left" Width="200"
+                x:Name="StudentListBox" 
+                 DisplayMemberPath="LastName"
+                 SelectionChanged="StudentListBox_SelectionChanged" Margin="5"/>
+
+        <!-- Student Details -->
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- For Group Name Label -->
+                <RowDefinition Height="Auto"/>
+                <!-- For Group Name TextBox -->
+                <RowDefinition Height="Auto"/>
+                <!-- For Teacher Label -->
+                <RowDefinition Height="Auto"/>
+                <!-- For Teacher ComboBox -->
+                <RowDefinition Height="Auto"/>
+                <!-- For Course Label -->
+                <RowDefinition Height="Auto"/>
+                <!-- For Course ComboBox -->
+                <RowDefinition Height="*"/>
+                <!-- Spacer -->
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Student First Name:" Grid.Row="0" Margin="5"/>
+            <TextBox x:Name="FirstNameTextBox" Grid.Row="1" Margin="5, 0, 0, 5"/>
+
+            <TextBlock Text="Student Last Name:" Grid.Row="2" Margin="5"/>
+            <TextBox x:Name="LastNameTextBox" Grid.Row="3" Margin="5, 0, 0, 5"/>
+
+            <TextBlock Text="Group:" Grid.Row="4" Margin="5"/>
+            <ComboBox x:Name="GroupComboBox" DisplayMemberPath="Name" SelectedValuePath="GroupId" Grid.Row="5" Margin="5, 0, 0, 5"/>
+        </Grid>
+    </DockPanel>
+</Page>
