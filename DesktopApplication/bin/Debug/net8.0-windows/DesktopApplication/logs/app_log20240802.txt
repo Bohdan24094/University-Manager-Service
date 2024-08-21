@@ -1,7 +1,0 @@
-2024-08-02 10:28:35.013 +03:00 [INF] Fetching all courses
-2024-08-02 10:35:04.095 +03:00 [INF] Fetching all courses
-2024-08-02 10:35:18.174 +03:00 [INF] Application Shutting Down
-2024-08-02 10:36:29.405 +03:00 [INF] Fetching all courses
-2024-08-02 10:36:46.869 +03:00 [INF] Application Shutting Down
-2024-08-02 10:43:53.166 +03:00 [INF] Fetching all courses
-2024-08-02 10:43:58.531 +03:00 [INF] Application Shutting Down

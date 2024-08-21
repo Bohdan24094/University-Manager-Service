@@ -1,2 +1,0 @@
-2024-08-18 19:49:36.276 +03:00 [INF] Application starting up
-2024-08-18 19:49:36.386 +03:00 [INF] Application Starting Up
