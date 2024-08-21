@@ -58,21 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainContent.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\MainContent.xaml.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\MainContent.xaml.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\MainContent.xaml.cs",
-              "RelativeToolTip": "DesktopApplication\\MainContent.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T15:54:15.956Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0849e941-4665-42e5-8dd0-e4c8da15dbd0}"
@@ -88,6 +75,32 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-20T15:53:56.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CourseManagementPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\CourseManagementPage.xaml.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\CourseManagementPage.xaml.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\CourseManagementPage.xaml.cs",
+              "RelativeToolTip": "DesktopApplication\\CourseManagementPage.xaml.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwGQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T15:54:26.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainContent.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\MainContent.xaml.cs",
+              "RelativeDocumentMoniker": "DesktopApplication\\MainContent.xaml.cs",
+              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\MainContent.xaml.cs",
+              "RelativeToolTip": "DesktopApplication\\MainContent.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T15:54:15.956Z",
               "EditorCaption": ""
             },
             {
@@ -114,19 +127,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAIoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-20T15:52:46.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CourseManagementPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\CourseManagementPage.xaml.cs",
-              "RelativeDocumentMoniker": "DesktopApplication\\CourseManagementPage.xaml.cs",
-              "ToolTip": "C:\\Users\\bobko\\Development\\wpf-desktop-application\\DesktopApplication\\CourseManagementPage.xaml.cs",
-              "RelativeToolTip": "DesktopApplication\\CourseManagementPage.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T15:54:26.886Z",
               "EditorCaption": ""
             },
             {
