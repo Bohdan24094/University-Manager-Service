@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DesktopApplication.Models;
+﻿using DesktopApplication.Models;
 using DesktopApplication.ViewModels;
 using Serilog;
 using Microsoft.EntityFrameworkCore;
-using System.Windows;
 
 namespace DesktopApplication.Services
 {
@@ -79,8 +73,7 @@ namespace DesktopApplication.Services
             if (groupsWithTeacher.Any())
             {
                 _logger.Warning("Cannot delete teacher {TeacherId} because they are assigned to groups: {GroupIds}", teacherId, string.Join(", ", groupsWithTeacher.Select(g => g.GroupId)));
-                MessageBox.Show($"Cannot delete the teacher '{teacher.FirstName} {teacher.LastName}' because they are assigned to groups. Please reassign those groups to a different teacher before deletion.");
-                return; 
+                throw new Exception($"Cannot delete the teacher '{teacher.FirstName} {teacher.LastName}' because they are assigned to groups. Please reassign those groups to a different teacher before deletion.");
             }
             _context.Teachers.Remove(teacher);
             await _context.SaveChangesAsync();

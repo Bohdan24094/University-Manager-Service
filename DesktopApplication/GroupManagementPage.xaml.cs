@@ -34,13 +34,16 @@ namespace DesktopApplication
         {
             if ( CourseComboBox.SelectedValue!= null && TeacherComboBox.SelectedValue!=null)
             {
-                await _groupManager.CreateGroupAsync(GroupNameTextBox.Text, (int)CourseComboBox.SelectedValue, (int)TeacherComboBox.SelectedValue);
-                LoadData();
-            }
-            else
-            {
-                MessageBox.Show("Please choose the existing course and teacher to attach");
-
+                try
+                {
+                    await _groupManager.CreateGroupAsync(GroupNameTextBox.Text, (int)CourseComboBox.SelectedValue, (int)TeacherComboBox.SelectedValue);
+                                LoadData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+                
             }
         }
 
@@ -49,8 +52,16 @@ namespace DesktopApplication
             var selectedGroup = GroupListBox.SelectedItem as Group;
             if (selectedGroup != null)
             {
-                await _groupManager.DeleteGroupAsync(selectedGroup.GroupId);
-                LoadData();
+                try
+                {
+                    await _groupManager.DeleteGroupAsync(selectedGroup.GroupId);
+                                    LoadData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+
             }
         }
 
@@ -59,8 +70,15 @@ namespace DesktopApplication
             var selectedGroup = GroupListBox.SelectedItem as Group;
             if (selectedGroup != null)
             {
-                await _groupManager.UpdateGroupAsync(selectedGroup.GroupId, GroupNameTextBox.Text, (int)CourseComboBox.SelectedValue, (int)TeacherComboBox.SelectedValue);
-               LoadData();
+                try
+                {
+                    await _groupManager.UpdateGroupAsync(selectedGroup.GroupId, GroupNameTextBox.Text, (int)CourseComboBox.SelectedValue, (int)TeacherComboBox.SelectedValue);
+                                   LoadData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}","Error Updating group", MessageBoxButton.OK, MessageBoxImage.Error);
+                } 
             }
         }
 
@@ -94,9 +112,14 @@ namespace DesktopApplication
         {
             var selectedGroup = GroupListBox.SelectedItem as Group;
             if (selectedGroup == null) return;
-
-            await _groupManager.ClearGroupAsync(selectedGroup.GroupId);
-
+            try
+            {
+                await _groupManager.ClearGroupAsync(selectedGroup.GroupId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "CSV file (*.csv)|*.csv"

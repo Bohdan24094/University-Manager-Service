@@ -1,13 +1,7 @@
 ﻿using DesktopApplication.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Serilog;
 using Microsoft.EntityFrameworkCore;
-using DesktopApplication.ViewModels;
-using System.Windows;
+using System.Windows.Forms;
 
 namespace DesktopApplication.Services
 {
@@ -71,8 +65,7 @@ namespace DesktopApplication.Services
             if (groupsWithCourse.Any())
             {
                 _logger.Warning("Cannot delete course {courseId} because they are assigned to groups: {GroupIds}", courseId, string.Join(", ", groupsWithCourse.Select(g => g.GroupId)));
-                MessageBox.Show($"Cannot delete the course because they are assigned to groups. Please reassign those groups to a different teacher before deletion.");
-                return; 
+                throw new Exception($"Cannot delete the course because they are assigned to groups. Please reassign those groups to a different teacher before deletion.");
             }
 
             _context.Courses.Remove(course);

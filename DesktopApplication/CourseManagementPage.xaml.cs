@@ -84,7 +84,7 @@ namespace DesktopApplication
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error deleting course: {ex.Message}");
+                    MessageBox.Show($"Error: {ex.Message}", "Course Deletion Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }

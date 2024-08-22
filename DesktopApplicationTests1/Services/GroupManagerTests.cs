@@ -1,8 +1,17 @@
-﻿using System.Text;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using DesktopApplication.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using DesktopApplication.Models;
 using Moq;
 using Serilog;
 using Microsoft.EntityFrameworkCore;
+using System.Windows.Forms;
+using CsvHelper;
+using System.Globalization;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using DocumentFormat.OpenXml.Packaging;
 using Paragraph = DocumentFormat.OpenXml.Wordprocessing.Paragraph;
@@ -10,6 +19,7 @@ using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 using DocumentFormat.OpenXml.Wordprocessing;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas.Parser;
+using iText.Kernel.Pdf.Canvas.Parser.Listener;
 
 namespace DesktopApplication.Services.Tests
 {
@@ -244,9 +254,10 @@ namespace DesktopApplication.Services.Tests
                 using (var writer = new StreamWriter(memoryStream, leaveOpen: true))
                 {
                     groupManager.ExportStudentsToStream(groupId, writer);
-                    writer.Flush(); 
+                    writer.Flush(); // ensure all data is written to stream before dispose
                 }
 
+                // Reset position after using the StreamWriter
                 memoryStream.Position = 0;
 
                 // Assert
@@ -258,7 +269,7 @@ namespace DesktopApplication.Services.Tests
             }
             finally
             {
-                memoryStream.Dispose(); 
+                memoryStream.Dispose(); // clean up the memoryStream
             }
         }
 
@@ -275,13 +286,15 @@ namespace DesktopApplication.Services.Tests
                 GroupId = groupId,
                 Name = "Chem 101",
                 CourseId = 1,
-                Students = new List<Student>() 
+                Students = new List<Student>() // Start with an empty student list
             });
             context.SaveChanges();
 
+            // Prepare CSV data for import
             string csvData = "FirstName,LastName\nAlice,Wonderland\nBob,Builder";
             var filePath = "fake_path.csv";
 
+            // Substitute file IO with memory-based operations
             using (var reader = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(csvData)))
             {
                 using (var streamWriter = new StreamWriter(filePath))
@@ -296,7 +309,7 @@ namespace DesktopApplication.Services.Tests
             // Assert
             var group = context.Groups.Include(g => g.Students).FirstOrDefault(g => g.GroupId == groupId);
             Assert.IsNotNull(group);
-            Assert.AreEqual(2, group.Students.Count); 
+            Assert.AreEqual(2, group.Students.Count); // Expect two new students
             Assert.IsTrue(group.Students.Any(s => s.FirstName == "Alice" && s.LastName == "Wonderland"));
             Assert.IsTrue(group.Students.Any(s => s.FirstName == "Bob" && s.LastName == "Builder"));
         }
@@ -309,12 +322,13 @@ namespace DesktopApplication.Services.Tests
             var context = CreateInMemoryDbContext();
             var groupManager = CreateGroupManager(context);
 
+            // Setup in-memory context data
             context.Groups.Add(new Group
             {
                 GroupId = 1,
                 Name = "Chem 101",
                 CourseId = 1,
-                Course = new Course { Name = "Biochemistry" }, 
+                Course = new Course { Name = "Biochemistry" }, // Assuming course object setup
                 Students = new List<Student>
                  {
                      new Student { StudentId = 1, FirstName = "Alice", LastName = "Smith" },
@@ -323,6 +337,7 @@ namespace DesktopApplication.Services.Tests
             });
             context.SaveChanges();
 
+            // Use a temporary directory/file for test file creation
             var directory = Path.GetTempPath();
             var filePath = Path.Combine(directory, "test.docx");
 
@@ -331,18 +346,23 @@ namespace DesktopApplication.Services.Tests
                 // Act
                 groupManager.GenerateDocx(groupId, filePath);
 
+                // Act - Load generated DOCX into memory
                 using var wordDoc = WordprocessingDocument.Open(filePath, false);
 
+                // Validate DOCX contents
                 var body = wordDoc.MainDocumentPart.Document.Body;
                 Assert.IsNotNull(body);
 
+                // Validate Course Title
                 var firstParagraph = body.Elements<Paragraph>().FirstOrDefault();
                 Assert.IsNotNull(firstParagraph);
                 Assert.IsTrue(firstParagraph.InnerText.Contains("Course: Biochemistry"));
 
+                // Validate Group Name
                 var secondText = firstParagraph.Elements<Run>().FirstOrDefault()?.Elements<Text>().Skip(1).FirstOrDefault();
                 Assert.IsTrue(secondText.InnerText.Contains("Group: Chem 101"));
 
+                // Validate Student List
                 var studentParagraph = body.Elements<Paragraph>().Skip(1).FirstOrDefault();
                 Assert.IsNotNull(studentParagraph);
                 var studentsText = studentParagraph.Elements<Run>().Select(run => run.InnerText);
@@ -356,6 +376,7 @@ namespace DesktopApplication.Services.Tests
             }
             finally
             {
+                // Cleanup the file created during the test to ensure it doesn't linger
                 if (File.Exists(filePath))
                 {
                     File.Delete(filePath);
@@ -372,6 +393,7 @@ namespace DesktopApplication.Services.Tests
             var loggerMock = new Mock<ILogger>();
             var groupManager = CreateGroupManager(context);
 
+            // Seed the database with test data
             var course = new Course { CourseId = 1, Name = "Computer Science" };
             var group = new Group
             {
@@ -389,6 +411,7 @@ namespace DesktopApplication.Services.Tests
             context.Groups.Add(group);
             context.SaveChanges();
 
+            // Create a temporary file path for the PDF
             string filePath = Path.GetTempFileName();
 
             try
@@ -397,8 +420,10 @@ namespace DesktopApplication.Services.Tests
                 groupManager.GeneratePdf(1, filePath);
 
                 // Assert
+                // Optionally verify that the file was created
                 Assert.IsTrue(File.Exists(filePath));
 
+                // Optionally, verify the contents of the PDF (e.g., using iText to read the file)
                 using (var reader = new PdfReader(filePath))
                 using (var pdfDoc = new PdfDocument(reader))
                 {
@@ -406,6 +431,7 @@ namespace DesktopApplication.Services.Tests
 
                     for (int page = 1; page <= pdfDoc.GetNumberOfPages(); page++)
                     {
+                        // Extract text from each page using the correct method
                         var pdfPage = pdfDoc.GetPage(page);
                         string pageText = PdfTextExtractor.GetTextFromPage(pdfPage);
                         text.Append(pageText);
@@ -420,6 +446,7 @@ namespace DesktopApplication.Services.Tests
             }
             finally
             {
+                // Cleanup: Delete the temporary file
                 if (File.Exists(filePath))
                 {
                     File.Delete(filePath);

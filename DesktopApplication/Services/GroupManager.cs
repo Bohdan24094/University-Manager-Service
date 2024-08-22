@@ -56,14 +56,12 @@ namespace DesktopApplication.Services
             if (existingGroup != null)
             {
                 _logger.Warning("A group with the same name '{GroupName}' already exists in course '{CourseId}'", groupName, courseId);
-                MessageBox.Show($"A group with the same name '{groupName}' currently exists in this course. You can change the name or create it in another course.");
-                return;
+                throw new Exception($"A group with the same name currently exists in this course. You can change the name or create it in another course.");
             }
             else if (groupWithSameTeacher != null)
             {
                 _logger.Warning("A group with TeacherId '{TeacherId}' already exists", teacherId);
-                MessageBox.Show("The teacher is already assigned to another group. Please choose another teacher.");
-                return;
+                throw new Exception("The teacher is already assigned to another group. Please choose another teacher.");
             }
 
             var newGroup = new Group
@@ -77,7 +75,6 @@ namespace DesktopApplication.Services
             await _context.SaveChangesAsync();
 
             _logger.Information("Group {GroupName} created successfully", groupName);
-            MessageBox.Show($"Group '{groupName}' created successfully");
         }
 
         public async Task UpdateGroupAsync(int groupId, string groupName, int courseId, int teacherId)
@@ -95,15 +92,13 @@ namespace DesktopApplication.Services
             if (groupWithSameName != null)
             {
                 _logger.Warning("A group with the same name '{GroupName}' already exists in the course '{CourseId}'", groupName, courseId);
-                MessageBox.Show("A group with the same name currently exists in this course. Please choose another name.");
-                return;
+                throw new Exception("A group with the same name currently exists in this course. Please choose another name.");
             }
 
             if (groupWithSameTeacher != null)
             {
                 _logger.Warning("A group with TeacherId '{TeacherId}' already exists", teacherId);
-                MessageBox.Show("The teacher is already assigned to another group. Please choose another teacher.");
-                return;
+                throw new Exception("The teacher is already assigned to another group. Please choose another teacher.");
             }
 
             var selectedGroup = await _context.Groups.FindAsync(groupId);
@@ -115,22 +110,21 @@ namespace DesktopApplication.Services
                 await _context.SaveChangesAsync();
                 string successString = "Group {GroupName} updated successfully";
                 _logger.Information(successString, groupName);
-                MessageBox.Show(successString, groupName);
             }
             else
             {
                 string errorString = "The specified group could not be found.";
                 _logger.Warning(errorString, groupId);
-                MessageBox.Show(errorString);
+                throw new Exception(errorString);
             }
         }
 
         public async Task DeleteGroupAsync(int groupId)
         {
+            string errorMessage = "Cannot delete group {GroupName} because it has students";
             _logger.Information("Deleting group {GroupId}", groupId);
             var groupName = "";
             var selectedGroup = _context.Groups
-                                        .Include(g => g.Name == groupName)
                                         .Include(g => g.Students)
                                         .FirstOrDefault(g => g.GroupId == groupId);
             if (selectedGroup != null && !selectedGroup.Students.Any())
@@ -141,14 +135,15 @@ namespace DesktopApplication.Services
             }
             else
             {
-                _logger.Warning("Cannot delete group {GroupName} because it has students", groupName);
+                _logger.Warning(errorMessage, groupName);
+                throw new Exception("Cannot delete group {GroupName} because it has students");
             }
         }
 
         public async Task ClearGroupAsync(int groupId)
         {
             _logger.Information("Clearing students in Group ID: {GroupId}", groupId);
-
+            string errorMessage = "No students found to clear for Group";
             var group = await _context.Groups.Include(g => g.Students)
                                              .FirstOrDefaultAsync(g => g.GroupId == groupId);
 
@@ -160,13 +155,23 @@ namespace DesktopApplication.Services
             }
             else
             {
-                _logger.Information("No students found to clear for Group ID: {GroupId}", groupId);
+                _logger.Information(errorMessage);
+                throw new Exception(errorMessage);
             }
         }
 
         public void ExportStudents(int groupId, string filePath)
         {
-            _logger.Information("Exporting students for group {GroupId} to {FilePath}", groupId, filePath);
+            using (var writer = new StreamWriter(filePath))
+            {
+                ExportStudentsToStream(groupId, writer);
+            }
+        }
+
+        // New method for testing
+        public void ExportStudentsToStream(int groupId, TextWriter writer)
+        {
+            _logger.Information("Exporting students for group {GroupId}", groupId);
 
             var selectedGroup = _context.Groups
                                         .Include(g => g.Students)
@@ -182,7 +187,7 @@ namespace DesktopApplication.Services
                 LastName = student.LastName,
                 GroupName = selectedGroup.Name
             }).ToList();
-            using (var writer = new StreamWriter(filePath))
+
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 csv.WriteRecords(exportedStudents);
